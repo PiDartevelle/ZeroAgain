@@ -1,0 +1,16 @@
+nav {
+    width: 500px;
+    height: 100px;
+    background-color: darkgoldenrod;
+}
+
+.return {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    background-color: brown;
+}
+article {
+    background-color : burlywood;
+}
