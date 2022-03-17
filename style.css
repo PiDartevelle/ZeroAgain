@@ -80,3 +80,19 @@ p {
     margin: 1%;
     margin-top: 5px;
 }
+
+.button {
+        color:white;
+        background:#FEDA23;
+        padding: 15px 30px 15px 60px;
+        position: relative;
+      }
+
+.button::before {
+        content:'';
+        border-bottom:23px solid white; /*couleur du fond derrière le bouton*/
+        border-right: 20px solid transparent;
+        position: absolute;
+        left:0;
+        bottom: 0
+      }
