@@ -25,14 +25,14 @@ body {
   margin-right: auto;
   font-size: 10vh;
   font-weight: 200;
-  color: #67dc94;
-  text-shadow: 2px 2px #e03452;
+  color: lime;
+  text-shadow: 3px 3px #e03452;
   text-align: center;
   max-width: 80%;
 }
 
 #tableau {
-  color: #67dc94;
+  color: lime;
   text-shadow: 2px 2px #e03452;
   margin-left: auto;
   margin-right: auto;
