@@ -1,35 +1,47 @@
 body {
-    background-image: url("assets/retroscores.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: auto;
-    width: auto;
+  background-image: url("assets/retroscore2.jpg");
+  background-size: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: 'Press Start 2P', cursive;
+  height: 100vh;
+}
+
+.backHomePage{
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0px red;
 }
 #mainpage h1 {
-    margin-top: 8vh;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 8ch;
-    font-weight: 700;
-    color: #67dc94;
-    text-shadow: 2px 2px #e03452;
-    text-align: center;
-  }
-
-  #tableau{
-      color: #67dc94;
-      text-shadow: 2px 2px #e03452;
-      margin-left: auto;
-      margin-right: auto;
-    max-width: 75%;   
-    max-height: 75%;
-      
-  }
-
-  #tableau tr {
-    font-size: 6vh;
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 10vh;
+  font-weight: 200;
+  color: #67dc94;
+  text-shadow: 2px 2px #e03452;
+  text-align: center;
+  max-width: 80%;
 }
 
-#tableau th{
-    padding: 4vh;
+#tableau {
+  color: #67dc94;
+  text-shadow: 2px 2px #e03452;
+  margin-left: auto;
+  margin-right: auto;
+  width: clamp (200px, 50%, 400px);
+  max-height: 75%;
+}
+
+#tableau tr {
+  font-size: 2vh;
+}
+
+#tableau th {
+  padding: 4vh;
 }
