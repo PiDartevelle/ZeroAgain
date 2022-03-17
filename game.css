@@ -1,18 +1,42 @@
 *{
     font-family: 'Press Start 2P', cursive;
+    border: none;
+    padding: 0;
 }
 
 header{
     height: 5rem;
-    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+h1{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backHomePage{
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0px red;
 }
 
 body{
     height: 100%;
     width: 100%;
-    background-image: url('');
+    background-image: url('game-bckgrd.jpeg');
+   background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
 }
 
 .grid{
@@ -26,12 +50,16 @@ body{
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
+    padding-right: 1vw;
     font-size: 0.8rem;
     line-height: 1.5;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
+
 .game-board{
-    border: solid 2px;
+    border: white solid 2px;
     height: 100%;
     width: 90%;
 }
@@ -39,8 +67,11 @@ body{
 .play-button{
     background-color: #4caf50;
     font-size: 1rem;
+    width: 80%;
     padding: 1vw 2vw;
     cursor: pointer;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 .button{
@@ -50,12 +81,15 @@ body{
     grid-template-columns: 10vw 10vw 10vw;
     grid-template-rows: 8vw 8vw 8vw;
     margin: 2rem;
+    position: center;
 }
 
 .ArrowUp{
     grid-column-start: 2;
     background-color: #4caf50;
     font-size: 1rem;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 .ArrowDown{
@@ -63,18 +97,24 @@ body{
     grid-row-start: 3;
     background-color: #4caf50;
     font-size: 1rem;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 .ArrowLeft{
     grid-column-start: 1;
     background-color: #4caf50;
     font-size: 1rem;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 .ArrowRight{
     grid-column-start: 3;
     background-color: #4caf50;
     font-size: 1rem;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 footer{

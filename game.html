@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
-   <!-- <script src="tetris.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/> 
     <link href="game.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
         <h1>TETRIS</h1>
+        <button class="backHomePage"></button>
     </header>
    <div class = "grid">
-        <canvas id = "board" class = "game-board"></canvas>
+        <div id = "board" class = "game-board">
+       <!-- <script src="tetris.js"></script>  -->
+        </div>
         <div class = "right-column">
             <div>
                 <p>Score : <span id = "score">0</span></p>
                 <p>Lines : <span id = "lines">0</span></p>
-                <p>Lines : <span id = "level">0</span></p>
+                <p>Level : <span id = "level">0</span></p>
                 <canvas id = "next" class = "next"></canvas>
             </div>
             <button onclick = "play()" class = "play-button">Play</button>
