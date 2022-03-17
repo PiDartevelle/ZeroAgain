@@ -1,3 +1,9 @@
+body {
+background-image: url(sunset.jpg);
+background-position-x: 50%;
+background-repeat: no-repeat;
+}
+
 h1 {
     color: #FF00E5;
     text-shadow: 0px 4px 4px #00FFF0;
