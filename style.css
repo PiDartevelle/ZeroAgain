@@ -12,6 +12,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 50px;
+    margin: 20% 0 0 1%;
     position: absolute;
     width: 303px;
     height: 75px;
@@ -21,15 +22,71 @@ h1 {
 }
 button {
     cursor: pointer;
+    border-radius: 5px;
+    border: 3px solid #00FFF0;
+    background-color: lime;
+    font-weight: bold;
 }
 .sound {
-margin-top: 70%;
-margin-right: 30%;
+margin: 70% 27% 0 0;
 }
 
-.onOff {
+.onoff {
+    display: none;
+}
+.choosemode {
     display: none;
 }
 .show {
 display: inline-block;
+}
+
+.backHomePage{
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    border-left: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0px red;
+}
+
+.diff {
+    margin-top: 7%;
+}
+.rules {
+    margin-top: 7%;
+    font-family: 'Syncopate';
+}
+h2 {
+    color: lime;
+    padding-right: 0%;
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
+    opacity: 1;
+}
+p:hover{
+opacity: 1;
+color:rgb(0, 255, 242);
+}
+
+@media screen and (min-width:700px) {
+    body {
+        background-size: 100%;
+    }
+    h1 {
+        margin-left: 35%;
+    }
+    .sound {
+       margin-top: 10%;
+       margin-right: 2.5%;
+    }
+    .show {
+        margin: 0 10% 0 10%;
+    }
 }
