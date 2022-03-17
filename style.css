@@ -68,9 +68,25 @@ h2 {
 
 p {
     font-size: 1em;
-    opacity: 0;
+    opacity: 1;
 }
 p:hover{
 opacity: 1;
 color:rgb(0, 255, 242);
+}
+
+@media screen and (min-width:700px) {
+    body {
+        background-size: 100%;
+    }
+    h1 {
+        margin-left: 35%;
+    }
+    .sound {
+       margin-top: 10%;
+       margin-right: 2.5%;
+    }
+    .show {
+        margin: 0 10% 0 10%;
+    }
 }
