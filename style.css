@@ -22,10 +22,13 @@ h1 {
 }
 button {
     cursor: pointer;
+    border-radius: 5px;
+    border: 3px solid #00FFF0;
+    background-color: lime;
+    font-weight: bold;
 }
 .sound {
-margin-top: 70%;
-margin-right: 30%;
+margin: 70% 27% 0 0;
 }
 
 .onoff {
@@ -52,4 +55,22 @@ display: inline-block;
 
 .diff {
     margin-top: 7%;
+}
+.rules {
+    margin-top: 7%;
+    font-family: 'Syncopate';
+}
+h2 {
+    color: lime;
+    padding-right: 0%;
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
+    opacity: 0;
+}
+p:hover{
+opacity: 1;
+color:rgb(0, 255, 242);
 }
