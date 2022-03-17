@@ -12,7 +12,8 @@ body {
     height: 0;
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
-    border-right: 30px solid yellow;
+    border-right: 40px solid yellow;
+    border-left: transparent;
     cursor: pointer;
     background-color: transparent;
     box-shadow: 5px 0px red;

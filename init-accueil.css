@@ -14,9 +14,10 @@ body {
   margin-right: auto;
   font-size: 8ch;
   font-weight: 700;
-  color: #ffc4fb;
-  text-shadow: 2px 2px #7b0057;
+  color: #220040;
+  text-shadow: 2px 4px #ffe6fd;
   text-align: center;
+  opacity: 60%;
 }
 .bouttons {
   display: flex;
