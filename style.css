@@ -1,0 +1,15 @@
+h1 {
+    color: #FF00E5;
+    text-shadow: 0px 4px 4px #00FFF0;
+    font-size: 3em;
+    font-family: 'Syncopate';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    position: absolute;
+    width: 303px;
+    height: 75px;
+    left: 7%;
+    top: 1%;
+    text-align: center;
+}
