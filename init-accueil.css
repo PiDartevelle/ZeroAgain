@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 3vh;
+  
 }
 .btn {
   padding: 2vh;
@@ -33,6 +34,8 @@ body {
   text-align: center;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 /* /////////////////////////////////////////
 /////////////////////////////////////////

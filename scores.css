@@ -16,6 +16,7 @@ body {
     cursor: pointer;
     background-color: transparent;
     box-shadow: 5px 0px red;
+    text-decoration: none;
 }
 #mainpage h1 {
   margin-top: 3vh;
