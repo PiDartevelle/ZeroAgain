@@ -19,3 +19,16 @@ h1 {
     top: 1%;
     text-align: center;
 }
+
+div {
+    display: flex;
+    color: #00FFF0;
+    text-shadow: 0px 4px 4px #FF00E5;
+    font-family: 'Syncopate';
+}
+.sound {
+    margin-top: 70%;
+}
+.diff {
+    margin-top: 5%;
+}
