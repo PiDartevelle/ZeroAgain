@@ -1,51 +1,9 @@
 body {
-<<<<<<< HEAD
-    position: absolute;
-    margin: 0;
-}
-nav {
-    width: auto;
-    height: 100px;
-    background-color: rgb(0, 0, 0);
-    padding: auto;
-}
 
-.return {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(226, 12, 12);
-    padding: 15px 30px 15px 60px;
-    position: absolute;
-}
-
-.return:hover {
-    background-color: chartreuse;
-}
-
-/*.btn {
-    color:white;
-    background:#FEDA23;
-    padding: 15px 30px 15px 60px;
-    position: relative;
-  }
-  .btn::before {
-    content:'';
-    border-bottom:23px solid white; /*couleur du fond derrière le bouton
-    border-right: 20px solid transparent;
-    position: absolute;
-    left:0;
-    bottom: 0
-  }*/
-/*
-=======
-
->>>>>>> dev
-
-<<<<<<< HEAD
     cursor: pointer;
     background-color: transparent;
     box-shadow: 5px 0px red;
-}*/
+}
 /*.button {
     color:white;
     background:#FEDA23;
@@ -131,7 +89,4 @@ footer {
     position: absolute;
     width: auto;*/
     height: 500px;
-=======
- 
->>>>>>> dev
 }
