@@ -61,15 +61,15 @@ custo individuelle des boutons
   font-size: 3ch;
   text-align: center;
   text-shadow: 1px 2px black;
-  opacity: 80%;
+  opacity: 100%;
 }
 #scores-btn {
-  color: #271c06;
+  color: #ffb600;
   font-weight: 500;
   font-size: 3ch;
   text-align: center;
-  text-shadow: 3px 2px #ffb600;
-  opacity: 80%;
+  text-shadow: 2px 2px #271c06;
+  opacity: 1000%;
 }
 #aboutUs-btn {
   color: #271c06;
