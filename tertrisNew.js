@@ -1,7 +1,7 @@
 // ---------- DECLARATION DES VARIABLES ---------- //
 
 const gameBoard = document.getElementById("gameBoard");
-const ctx = gameBoard.getContext('2d');
+const context = gameBoard.getContext('2d');
 
 let delay = 300; // délai de rafraichissement de la fonction refreshCanvas
 const largeurGrille = 14; // Nombre de cases en largeur
@@ -151,8 +151,47 @@ function drawForme() {
     for(let i = 0; i < forme[numForme][rotation].length;i++){
         for(let j = 0; j < forme[numForm][rotation].length; j++){
             if(forme[numForm][rotation][j][i] == 1){
-                
+                context.fillStyle = couleursFormes[1][numForme]; // Couleur de contour de la forme
+                context.fillRect((xForm + i) * carreaux, (yForm + j) * carreaux, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillStyle = couleursFormes[0][numForm]; // Couleur de remplissage de la forme
+                context.fillRect((xForm + i) * carreaux + 1, (yForm + j) * carreaux + 1, carreaux - 2, carreaux - 2);
             }
         }
     }
-}
+};
+
+// Fonction de rafraichissement de l'affichage
+// Efface le canvas et dessine la forme
+function refreshCanvas(){
+    context.clearRect(0, 0, largeurGrille * carreaux, hauteurGrille * carreaux); // met en noir transparent tous les pixels dans le rectangle définis en supprimant tout ce qui a été dessiné avant. 
+    //v clearRect(coordonnée x du point de départ du rect, coordonnée y du point de départ du rect, largeur, hauteur)
+    drawForme();
+    yForm++;
+    if(yForm > hauteurGrille){
+        yForm = 0;
+    }
+};
+
+// Fonction de gestion des collisions
+  /* function collision(){
+        for(let i = 0; i < forme[numForme][rotation].length; i++){
+            for(let j = 0; i < forme[numForme][rotation].length; j++){
+                if(forme[numForme][rotation][j][i] == 1){
+                    if(formX > 0 && formX < LARGEUR_GRILLE){
+                        return true;
+                    }
+                    if(formY > HAUTEUR_GRILLE){
+                        return true
+                    }
+                    return false;
+                }
+            }
+        }
+
+    }*/
+
+// ---------- CODE ---------- //
+
+gameBoard.width = largeurGrille * carreaux;
+gameBoard.height = hauteurGrille * carreaux;
+gameBoard.style.border = "1px solid";

@@ -82,12 +82,14 @@ h1{
 
 .button{
     grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 2;
     display: grid;
-    grid-template-columns: 10vw 10vw 10vw;
-    grid-template-rows: 8vw 8vw 8vw;
-    margin: 2rem;
-    position: center;
+    grid-template-columns: 15vw 15vw 15vw;
+    grid-template-rows: 6vh 6vh 6vh;
+    margin: 2vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ArrowUp{
@@ -129,7 +131,15 @@ footer{
 }
 
 @media screen and (min-width: 800px){
-    
+
+    header{
+        font-size: 5vh;
+    }
+    h1{
+        margin-top: 3vh;
+        margin-bottom: 0;
+        text-align: center;
+    }
     .grid{
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr 1fr;
