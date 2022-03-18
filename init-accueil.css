@@ -1,0 +1,79 @@
+
+/* Custo générale
+éléments centrés et responsive 
+*/
+
+body {
+  background-image: url("assets/retroaccueil.jpg");
+  background-size: auto;
+  background-position: center center;
+}
+#maintitle {
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 8ch;
+  font-weight: 700;
+  color: #ffc4fb;
+  text-shadow: 2px 2px #7b0057;
+  text-align: center;
+}
+.bouttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+}
+.btn {
+  padding: 2vh;
+  margin: 1vh 1vh;
+  width: 200px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+/* /////////////////////////////////////////
+/////////////////////////////////////////
+
+custo individuelle des boutons
+
+///////////////////////////////
+///////////////////////////////
+ */
+#play-btn {
+  color: #ffae00;
+  font-weight: 900;
+  font-size: 5ch;
+  text-align: center;
+  text-shadow: 6px 3px black;
+  opacity: 80%;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+}
+
+#settings-btn {
+  color: #ffae00;
+  font-weight: 500;
+  font-size: 3ch;
+  text-align: center;
+  text-shadow: 1px 2px black;
+  opacity: 80%;
+}
+#scores-btn {
+  color: #271c06;
+  font-weight: 500;
+  font-size: 3ch;
+  text-align: center;
+  text-shadow: 3px 2px #ffb600;
+  opacity: 80%;
+}
+#aboutUs-btn {
+  color: #271c06;
+  font-weight: 500;
+  font-size: 3ch;
+  text-align: center;
+  text-shadow: 3px 2px #ffb600;
+  opacity: 80%;
+}
