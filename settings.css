@@ -87,10 +87,19 @@ color:rgb(0, 255, 242);
     }
     h1 {
         margin-left: 35%;
+        margin-top: 5%;
     }
     .sound {
-       margin-top: 10%;
+       margin-top: 13%;
        margin-right: 2.5%;
+       margin-left: 41%;
+    }
+    .diff {
+        margin-left: 37%;
+    }
+    .rules {
+        margin-top: 6%;
+        margin-left: 39%;
     }
     .show {
         margin: 0 10% 0 10%;
