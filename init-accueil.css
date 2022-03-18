@@ -18,11 +18,7 @@ body {
   text-shadow: 2px 2px #7b0057;
   text-align: center;
 }
-.bouttons {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3vh;
-}
+
 .btn {
   padding: 2vh;
   margin: 1vh 1vh;
@@ -33,6 +29,10 @@ body {
   text-align: center;
   background-color: transparent;
   border: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  text-decoration: none;
 }
 /* /////////////////////////////////////////
 /////////////////////////////////////////
