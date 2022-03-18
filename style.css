@@ -26,6 +26,7 @@ button {
     border: 3px solid #00FFF0;
     background-color: lime;
     font-weight: bold;
+    color: #FF00E5;
 }
 .sound {
 margin: 70% 27% 0 0;
@@ -60,8 +61,13 @@ display: inline-block;
     margin-top: 7%;
     font-family: 'Syncopate';
 }
+mark {
+    background-color: lime;
+    text-shadow: 0px 4px 4px #00FFF0;
+    color: #FF00E5;
+}
 h2 {
-    color: lime;
+    color: black;
     padding-right: 0%;
     font-size: 1em;
 }
