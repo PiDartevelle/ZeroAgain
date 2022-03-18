@@ -1,45 +1,22 @@
+* {
+    font-family: 'Syncopate';
+}
+
 body {
 background-image: url(sunset.jpg);
 background-position-x: 50%;
 background-repeat: no-repeat;
 }
 
-h1 {
-    color: #FF00E5;
-    text-shadow: 0px 4px 4px #00FFF0;
-    font-size: 3em;
-    font-family: 'Syncopate';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50px;
-    margin: 20% 0 0 1%;
-    position: absolute;
-    width: 303px;
-    height: 75px;
-    left: 7%;
-    top: 1%;
-    text-align: center;
-}
-button {
-    cursor: pointer;
-    border-radius: 5px;
-    border: 3px solid #00FFF0;
-    background-color: lime;
-    font-weight: bold;
-    color: #FF00E5;
-}
-.sound {
-margin: 70% 27% 0 0;
+header {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-.onoff {
-    display: none;
-}
-.choosemode {
-    display: none;
-}
-.show {
-display: inline-block;
+h1 {
+    color: #FF00E5;
+    margin-top: 16%;
+    margin-right: 11%;
 }
 
 .backHomePage{
@@ -54,28 +31,68 @@ display: inline-block;
     box-shadow: 5px 0px red;
 }
 
+button {
+    cursor: pointer;
+    border: 3px solid #00FFF0;
+    background-color: lime;
+    font-weight: bold;
+    color: #FF00E5;
+}
+
+.sound {
+margin: 20% 30% 0 42%;
+}
+
+.onoff {
+    display: none;
+}
+
+.choosemode {
+    display: none;
+}
+
+.show {
+    display: flex;
+    margin: 5% 5% 0 5%;
+    justify-content: space-around;
+}
+
+.pop {
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 6% 0 6%;  
+}
+
+
 .diff {
-    margin-top: 7%;
+    margin-top: 12%;
+    margin-left: 32%;
 }
+
 .rules {
-    margin-top: 7%;
-    font-family: 'Syncopate';
+    margin-top: 10%;
 }
+
 mark {
     background-color: lime;
     text-shadow: 0px 4px 4px #00FFF0;
     color: #FF00E5;
+    bac
 }
+
 h2 {
     color: black;
     padding-right: 0%;
     font-size: 1em;
+    margin-left: 37%;
 }
 
 p {
     font-size: 1em;
     opacity: 1;
+text-align: center;
 }
+
 p:hover{
 opacity: 1;
 color:rgb(0, 255, 242);
