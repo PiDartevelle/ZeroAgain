@@ -1,18 +1,51 @@
 *{
     font-family: 'Press Start 2P', cursive;
+    padding: 0;
+}
+
+html{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('game-bckgrd.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+body{
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 header{
     height: 5rem;
-    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
-body{
-    height: 100%;
-    width: 100%;
-    background-image: url('');
+h1{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backHomePage{
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    border-left: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0px red;
 }
 
 .grid{
@@ -21,6 +54,11 @@ body{
     grid-template-rows: 3fr 1fr;
 }
 
+.game-board{
+    border: white solid 2px;
+    height: 100%;
+    width: 80%;
+}
 .right-column{
     display: flex;
     flex-direction: column;
@@ -28,19 +66,18 @@ body{
     width: 100%;
     font-size: 0.8rem;
     line-height: 1.5;
-}
-
-.game-board{
-    border: solid 2px;
-    height: 100%;
-    width: 90%;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .play-button{
     background-color: #4caf50;
     font-size: 1rem;
-    padding: 1vw 2vw;
+    width: 80%;
+    padding: 2vw;
     cursor: pointer;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 .button{
@@ -50,12 +87,15 @@ body{
     grid-template-columns: 10vw 10vw 10vw;
     grid-template-rows: 8vw 8vw 8vw;
     margin: 2rem;
+    position: center;
 }
 
 .ArrowUp{
     grid-column-start: 2;
     background-color: #4caf50;
     font-size: 1rem;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 .ArrowDown{
@@ -63,21 +103,55 @@ body{
     grid-row-start: 3;
     background-color: #4caf50;
     font-size: 1rem;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 .ArrowLeft{
     grid-column-start: 1;
     background-color: #4caf50;
     font-size: 1rem;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 .ArrowRight{
     grid-column-start: 3;
     background-color: #4caf50;
     font-size: 1rem;
+    box-shadow: 5px 5px black;
+    border-radius: 0.5vw;
 }
 
 footer{
-    height: 2.5rem;
+    height: 1vh;
     
+}
+
+@media screen and (min-width: 800px){
+    
+    .grid{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+     .game-board{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        width: 40vw;
+        height: 80vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .right-column{
+        height: 100%;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        font-size: 2rem;
+    }
+    .play-button{
+        font-size: 2rem;;
+    }
+    .button{
+        display: none;
+    }
 }
