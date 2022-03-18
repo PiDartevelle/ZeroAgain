@@ -1,0 +1,137 @@
+body {
+<<<<<<< HEAD
+    position: absolute;
+    margin: 0;
+}
+nav {
+    width: auto;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    padding: auto;
+}
+
+.return {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(226, 12, 12);
+    padding: 15px 30px 15px 60px;
+    position: absolute;
+}
+
+.return:hover {
+    background-color: chartreuse;
+}
+
+/*.btn {
+    color:white;
+    background:#FEDA23;
+    padding: 15px 30px 15px 60px;
+    position: relative;
+  }
+  .btn::before {
+    content:'';
+    border-bottom:23px solid white; /*couleur du fond derrière le bouton
+    border-right: 20px solid transparent;
+    position: absolute;
+    left:0;
+    bottom: 0
+  }*/
+/*
+=======
+
+>>>>>>> dev
+
+<<<<<<< HEAD
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0px red;
+}*/
+/*.button {
+    color:white;
+    background:#FEDA23;
+  }*/
+
+button::before {
+    content:'';
+    border-bottom:23px solid black; /*couleur du fond derrière le bouton*/
+    border-right: 20px solid transparent;
+    position: absolute;
+    left:0;
+    bottom: 0
+  }
+
+
+h1 {
+    text-shadow: 10px;
+    font-family: 'Syncopate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 44px;
+    text-align: center;
+    color: #FF0000;
+    text-shadow: 0px 4px 4px #FF00E5;
+    padding-top: 25px;
+    margin: auto;
+    position :relative;
+    /*width: auto;
+    border: 1px solid #000000;*/
+}
+
+.clignote {
+    color:rgb(233, 16, 150);
+    animation: clignote 2s linear infinite;
+  }
+  @keyframes clignote {
+    50% { opacity: 0; }
+  }
+
+img {
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+section {
+    background-image:url(licorne-neon.jpg);
+    background-size: 100%;
+    padding: 3%;
+}
+
+article {
+    width: auto;
+    background-color: rgb(17, 13, 8);
+    opacity: 0.75;
+    /*margin: 5%,0;*/
+    padding: 2%;
+    color: whitesmoke;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+h3 {
+    margin-left: 15px;
+    padding: 2%;
+    display: inline;
+}
+
+p {
+    margin: 1%;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: #000000;
+    /*margin: 0;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    width: auto;*/
+    height: 500px;
+=======
+ 
+>>>>>>> dev
+}
