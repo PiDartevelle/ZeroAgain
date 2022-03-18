@@ -148,6 +148,9 @@ footer{
         grid-row-end: 3;
         font-size: 2rem;
     }
+    .play-button{
+        font-size: 2rem;;
+    }
     .button{
         display: none;
     }

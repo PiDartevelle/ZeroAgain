@@ -1,11 +1,12 @@
-﻿window.onload = function() {
+﻿// ---------- DECLARATION DES VARIABLES ----------
+    const gameBord = document.getElementById("gameBoard");
+    let delay = 300; // délai de rafraichissement de la fonction refreshCanvas()
+    let ctx;
+    
 	const LARGEUR_GRILLE = 14;  // Nombre de cases en largeur
     const HAUTEUR_GRILLE = 28;  // Nombre de cases en hauteur
     const CARREAU = 20;	        // Taille en pixels d'une case de la grille
-    let canvas;                 // Un canvas est un élément HTML dans lequel on peut dessiner des formes
-    let ctx;
-    let delay = 300; // délai de rafraichissement de la fonction refreshCanvas()
-	
+    
 	// Position de la forme sur la grille
 	const X_INITIAL = 5;
 	const Y_INITIAL = 0;
@@ -141,10 +142,9 @@
         [0,1,0,0]
       ],
     ]; 
-	// !!! Fin de déclaration des variables !!!
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////	    
-	// !!! Les fonctions !!!
+// ---------- Fin de déclaration des variables ----------
+    
+// ---------- FONCTIONS ----------
 	
     // drawForme()
 	//   Dessine une forme à l'écran 
@@ -158,16 +158,14 @@
 			for(let j = 0 ; j < forme[numForme][rotation].length ; j++) {
                 if(forme[numForme][rotation][j][i] == 1) {
                     ctx.fillStyle = couleursFormes[1][numForme]; // Couleur du contour de la forme
-                    //ctx.fillStyle = "#000000";
                     ctx.fillRect((formX + i) * CARREAU, (formY + j) * CARREAU, CARREAU, CARREAU); // Contour de la forme
                     ctx.fillStyle = couleursFormes[0][numForme]; // Couleur de remplissage de la forme
-                    //ctx.fillStyle = "#FF00FF";
                     ctx.fillRect((formX + i) * CARREAU + 1, (formY + j) * CARREAU + 1, CARREAU - 2, CARREAU - 2); // Remplissage de la forme
                 }
             }
         }
     }
-    ///////////////////////////////////////////////////////
+
     // refreshCanvas()
 	//   Rafraichi l'affichage :
 	//      - efface le canvas
@@ -181,9 +179,7 @@
             formY = 0;
         }
     };
-    setInterval(refreshCanvas, delay);
 
-    ///////////////////////////////////////////////////////
     // inti()
 	//   Initialisation du canvas
     function init() {
@@ -192,6 +188,7 @@
         canvas.height = HAUTEUR_GRILLE * CARREAU;
         canvas.style.border = "1px solid";
         document.body.appendChild(canvas);  // Ajoute le canvas à la page html
+        //gameBord.appendChild(canvas);
         ctx = canvas.getContext('2d');
 
 		refreshCanvas();
@@ -200,7 +197,7 @@
     ////////////////////////////
     // colision()
     // Détermination des cas de colision
-    function collision(){
+   /* function collision(){
         for(let i = 0; i < forme[numForme][rotation].length; i++){
             for(let j = 0; i < forme[numForme][rotation].length; j++){
                 if(forme[numForme][rotation][j][i] == 1){
@@ -215,14 +212,18 @@
             }
         }
 
-    }
-    // !!! Fin des fonctions !!!
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // !!! Code !!!
-	// Seule ligne de code... avec la gestion des évènements clavier
-    init();
+    }*/
+// ---------- Fin des fonctions -----------
 
+// ---------- CODE ----------
+
+    // Initialisation du canvas
+
+    gameBord.width = LARGEUR_GRILLE * CARREAU;
+    gameBord.height = HAUTEUR_GRILLE * CARREAU;
+    ctx = gameBord.getContext('2d');
+    setInterval(refreshCanvas, delay);
+    
 	// Gestion des évènements clavier
     window.addEventListener("keydown", function(event) {
         let key = event.key;
@@ -235,9 +236,9 @@
                 if(rotation >  forme[numForme].length - 1){
                     rotation = 0;
                 }
-                if(collision()){
+               /* if(collision()){
                     rotation = temporaire;
-                }
+                }*/
                 break;
 
             case 'ArrowDown': // flèche bas => rotation anti-horaire de la forme
@@ -246,9 +247,9 @@
                 if(rotation < 0){
                     rotation = forme[numForme].length - 1;
                 }
-                if(collision()){
+               /* if(collision()){
                     rotation = temporaire;
-                }
+                }*/
                 break;
             
             case 't':  // toutche t
@@ -264,9 +265,9 @@
                 if(formX > 0){
                     formX--;
                 }
-                if(collision()){
+                /*if(collision()){
                     
-                }
+                }*/
                 break;
 
             case 'ArrowRight': // flèche droite
@@ -276,4 +277,3 @@
                 break;
         }
       }, true);
-}
