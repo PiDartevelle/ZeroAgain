@@ -1,4 +1,3 @@
-
 /* Custo générale
 éléments centrés et responsive 
 */
@@ -7,18 +6,22 @@ body {
   background-image: url("assets/retroaccueil.jpg");
   background-size: auto;
   background-position: center center;
+  font-family: "Syncopate", "Times New Roman", Times, serif;
 }
 #maintitle {
-  margin-top: 8vh;
+  margin-top: 2vh;
   margin-left: auto;
   margin-right: auto;
-  font-size: 8ch;
+  margin-bottom: 3vh;
+  font-size: 10ch;
   font-weight: 700;
   color: #ffc4fb;
   text-shadow: 2px 2px #7b0057;
   text-align: center;
 }
-
+.bouttons {
+  line-height: 5ch;
+}
 .btn {
   padding: 2vh;
   margin: 1vh 1vh;
@@ -31,7 +34,7 @@ body {
   border: none;
   display: flex;
   flex-direction: column;
-  margin-bottom: 3vh;
+  margin-bottom: 1vh;
   text-decoration: none;
 }
 /* /////////////////////////////////////////
@@ -50,7 +53,6 @@ custo individuelle des boutons
   text-shadow: 6px 3px black;
   opacity: 80%;
   margin-bottom: 3vh;
-  margin-top: 3vh;
 }
 
 #settings-btn {
@@ -76,4 +78,13 @@ custo individuelle des boutons
   text-align: center;
   text-shadow: 3px 2px #ffb600;
   opacity: 80%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 600px) {
+    #maintitle {
+      margin-bottom: 16vh;
+    }
+  }
 }
