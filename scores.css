@@ -35,9 +35,10 @@ html {
       margin-right: auto;
     max-width: 75%;   
     max-height: 75%;
-    border: 2px solid lime;
     border-radius: 15%;
     text-align: center;
+    background-color:rgba(0, 255, 0, 25%);
+    
   }
 
   #tableau tr {

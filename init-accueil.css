@@ -10,12 +10,11 @@ body {
   background-size: auto;
   background-position: center center;
   font-family: "Syncopate", "Times New Roman", Times, serif;
-
 }
 #maintitle {
   
   margin: 2vh auto 3vh auto;
-  font-size: 10ch;
+  font-size: 10vh;
   font-weight: 700;
   color: #31202e6c;
   text-shadow: 3px 3px #ece8eb;
@@ -36,6 +35,7 @@ body {
   border: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 1vh;
   text-decoration: none;
 }
@@ -71,24 +71,25 @@ custo individuelle des boutons
   color: #ffae00;
   font-size: 4ch;
   text-align: center;
-  text-shadow: 1px 2px rgb(56, 54, 54);
-  opacity: 100%;
+  text-shadow: 2px 3px rgb(71, 68, 68);
+  opacity: 90%;
+  font-weight: 800;
+  
 }
 #scores-btn {
   color: #ffb600;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 4ch;
   text-align: center;
-  text-shadow: 2px 2px #271c06;
-  opacity: 1000%;
+  text-shadow: 2px 2px rgb(71, 68, 68);
+  
 }
 #aboutUs-btn {
-  color: #271c06;
-  font-weight: 500;
+  color: #ffae00;
+  font-weight: 800;
   font-size: 4ch;
   text-align: center;
-  text-shadow: 3px 2px #ffb600;
-  opacity: 80%;
+  text-shadow: 3px 2px rgb(71, 68, 68);
 }
 
 /* MEDIA QUERIES */
@@ -103,10 +104,19 @@ custo individuelle des boutons
 
 @media screen and (max-width: 600px) {
   #maintitle {
-    font-size: 8ch;
+    font-size: 6ch;
     margin-bottom: 8vh;
   }
   .bouttons {
-    padding-right: 10vw;
+   margin-right: auto;
+   margin-left: auto;
   }
 }
+  @media screen and (min-width: 601px) {
+    #scores-btn{
+      margin-top: 10vh;
+    }
+    #settings-btn{
+      margin-top: 8vh;
+    }
+  }
