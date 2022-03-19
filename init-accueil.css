@@ -10,13 +10,11 @@ body {
   background-size: auto;
   background-position: center center;
   font-family: "Syncopate", "Times New Roman", Times, serif;
+
 }
 #maintitle {
-  margin-top: 2vh;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3vh;
-  max-width: fit-content;
+  
+  margin: 2vh auto 3vh auto;
   font-size: 10ch;
   font-weight: 700;
   color: #31202e6c;
@@ -25,6 +23,7 @@ body {
 }
 .bouttons {
   line-height: 5ch;
+
 }
 .btn {
   padding: 2vh;
@@ -33,7 +32,6 @@ body {
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   background-color: transparent;
   border: none;
   display: flex;
@@ -101,3 +99,14 @@ custo individuelle des boutons
     }
 }
 
+
+
+@media screen and (max-width: 600px) {
+  #maintitle {
+    font-size: 8ch;
+    margin-bottom: 8vh;
+  }
+  .bouttons {
+    padding-right: 10vw;
+  }
+}
