@@ -119,4 +119,7 @@ custo individuelle des boutons
     #settings-btn{
       margin-top: 8vh;
     }
+    body{
+      letter-spacing: 1.5ch;
+    }
   }
