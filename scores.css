@@ -19,11 +19,12 @@ html {
     margin-right: auto;
     font-size: 10vh;
     font-weight: 700;
-    color: lime;
-    text-shadow: 2px 2px #e03452;
+    color: rgb(63, 236, 11);
+    text-shadow: 2px 4px #2b145b;
     text-align: center;
+    font-family: "Syncopate", "Times New Roman", Times, serif;
   }
-
+  
   #tableau{
     margin-top: 20vh;
     table-layout: fixed;
@@ -35,7 +36,7 @@ html {
       margin-right: auto;
     max-width: 75%;   
     max-height: 75%;
-    border-radius: 15%;
+    border-radius: 8%;
     text-align: center;
     background-color:rgba(0, 255, 0, 25%);
     
@@ -58,10 +59,12 @@ html {
 
 @media screen and (max-width: 600px) {
  #tableau { 
-   margin-top: 8  vh;
+   margin-top: 8vh;
 }
 #tableau tr{
   font-size: 3vh;
+}
+
 }
 #mainpage h1 {
   font-size: 8vh;
