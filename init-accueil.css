@@ -1,7 +1,10 @@
 /* Custo générale
 éléments centrés et responsive 
 */
-
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
   background-image: url("assets/retroaccueil.jpg");
   background-size: auto;
@@ -13,10 +16,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3vh;
+  max-width: fit-content;
   font-size: 10ch;
   font-weight: 700;
-  color: #ffc4fb;
-  text-shadow: 2px 2px #7b0057;
+  color: #31202e6c;
+  text-shadow: 3px 3px #ece8eb;
   text-align: center;
 }
 .bouttons {
@@ -37,6 +41,8 @@ body {
   margin-bottom: 1vh;
   text-decoration: none;
 }
+
+
 /* /////////////////////////////////////////
 /////////////////////////////////////////
 
@@ -50,23 +56,30 @@ custo individuelle des boutons
   font-weight: 900;
   font-size: 5ch;
   text-align: center;
-  text-shadow: 6px 3px black;
+  text-shadow: 6px 3px rgb(71, 68, 68);
   opacity: 80%;
   margin-bottom: 3vh;
+  animation-duration: 1.5s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
 }
-
+@keyframes clignoter {
+  0%   { opacity:1; }
+  40%   {opacity:0; }
+  100% { opacity:1; }
+}
 #settings-btn {
   color: #ffae00;
-  font-weight: 500;
-  font-size: 3ch;
+  font-size: 4ch;
   text-align: center;
-  text-shadow: 1px 2px black;
+  text-shadow: 1px 2px rgb(56, 54, 54);
   opacity: 100%;
 }
 #scores-btn {
   color: #ffb600;
   font-weight: 500;
-  font-size: 3ch;
+  font-size: 4ch;
   text-align: center;
   text-shadow: 2px 2px #271c06;
   opacity: 1000%;
@@ -74,7 +87,7 @@ custo individuelle des boutons
 #aboutUs-btn {
   color: #271c06;
   font-weight: 500;
-  font-size: 3ch;
+  font-size: 4ch;
   text-align: center;
   text-shadow: 3px 2px #ffb600;
   opacity: 80%;
@@ -86,5 +99,5 @@ custo individuelle des boutons
     #maintitle {
       margin-bottom: 16vh;
     }
-  }
 }
+
