@@ -20,46 +20,45 @@ html {
     display: flex;
     justify-content: space-evenly;
 }
-.card{
-    width: 45cw;
-}
 h1 {
     text-shadow: 10px;
     font-family: 'Syncopate';
     text-align: center;
     color: #FF0000;
-    text-shadow: 0px 4px 4px #FF00E5;
+    text-shadow: 0px 4px 4px cyan;
     margin-top: 25px;
     font-weight: 900;
-    font-size: 5rem;
-    /*width: auto;
-    border: 1px solid #000000;*/    
+    font-size: 5rem;  
 }
 img {
     position: relative;
     display: block;
     margin: auto;
 }
-
-
 article {
-    width: auto;
-    background-color: rgb(17, 13, 8);
-    opacity: 0.75;
-    /*margin: 5%,0;*/
     padding: 2%;
     color: whitesmoke;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
+    opacity: 80%;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+    font-size: 2ch;
 }
-/*
-body {
-    background-color: transparent;
-    box-shadow: 5px 0px red;
+article:hover{
+    color: cyan;
+    text-align: left;
 }
-.button {
-    color:white;
-    background:#FEDA23;
-  }*/
+article h3{
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    article p{
+        display: none;
+    }
+    article:hover{
+    display: initial;
+    }
+    #laTeam{
+        flex-direction: column; 
+    }
+}
