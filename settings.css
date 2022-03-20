@@ -98,22 +98,36 @@ table:hover {
         background-size: 100%;
     }
     h1 {
-        margin-left: 35%;
-        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
     }
     .sound {
-       margin-top: 13%;
-       margin-right: 2.5%;
-       margin-left: 41%;
+       margin-top: 3%;
+       margin-left: 47.9%;
+       margin-bottom: 2%;
+
     }
     .diff {
-        margin-left: 37%;
-    }
-    .rules {
-        margin-top: 6%;
-        margin-left: 39%;
+        margin-top: 5%;
+        margin-left: 46.5%;
+        margin-bottom: 2%;
     }
     .show {
-        margin: 0 10% 0 10%;
+        margin: 0 35% 0 35%;
+    }
+    .pop {
+        margin: 0 35% 0 35%;
+    }
+    .rules {
+        margin-top: 5%;
+    }
+    h2 {
+        font-size: 2vh;
+    }
+    table {
+        table-layout: fixed;
+        width: 15%;
+        margin-left: 42.5%;
     }
 }
