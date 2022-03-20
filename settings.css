@@ -16,7 +16,7 @@ header {
 h1 {
     color: #FF00E5;
     margin-top: 16%;
-    margin-right: 11%;
+    margin-right: 20%;
 }
 
 .backHomePage{
@@ -60,7 +60,7 @@ margin: 20% 30% 0 42%;
 .pop {
     display: flex;
     justify-content: space-around;
-    margin: 5% 6% 0 6%;  
+    margin: 5% 6% 0 6%;
 }
 
 
@@ -77,11 +77,10 @@ mark {
     background-color: lime;
     text-shadow: 0px 4px 4px #00FFF0;
     color: #FF00E5;
-    bac
 }
 
 h2 {
-    color: black;
+    color: black ;
     padding-right: 0%;
     font-size: 1em;
     margin-left: 37%;
