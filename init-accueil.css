@@ -1,24 +1,29 @@
-
 /* Custo générale
 éléments centrés et responsive 
 */
-
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
   background-image: url("assets/retroaccueil.jpg");
   background-size: auto;
   background-position: center center;
+  font-family: "Syncopate", "Times New Roman", Times, serif;
 }
 #maintitle {
-  margin-top: 8vh;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 8ch;
+  
+  margin: 2vh auto 3vh auto;
+  font-size: 10vh;
   font-weight: 700;
-  color: #ffc4fb;
-  text-shadow: 2px 2px #7b0057;
+  color: #31202e6c;
+  text-shadow: 3px 3px #ece8eb;
   text-align: center;
 }
+.bouttons {
+  line-height: 5ch;
 
+}
 .btn {
   padding: 2vh;
   margin: 1vh 1vh;
@@ -26,14 +31,16 @@ body {
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   background-color: transparent;
   border: none;
   display: flex;
   flex-direction: column;
-  margin-bottom: 3vh;
+  align-items: center;
+  margin-bottom: 1vh;
   text-decoration: none;
 }
+
+
 /* /////////////////////////////////////////
 /////////////////////////////////////////
 
@@ -47,33 +54,72 @@ custo individuelle des boutons
   font-weight: 900;
   font-size: 5ch;
   text-align: center;
-  text-shadow: 6px 3px black;
+  text-shadow: 6px 3px rgb(71, 68, 68);
   opacity: 80%;
   margin-bottom: 3vh;
-  margin-top: 3vh;
+  animation-duration: 1.5s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
 }
-
+@keyframes clignoter {
+  0%   { opacity:1; }
+  40%   {opacity:0; }
+  100% { opacity:1; }
+}
 #settings-btn {
   color: #ffae00;
-  font-weight: 500;
-  font-size: 3ch;
+  font-size: 4ch;
   text-align: center;
-  text-shadow: 1px 2px black;
-  opacity: 80%;
+  text-shadow: 2px 3px rgb(71, 68, 68);
+  opacity: 90%;
+  font-weight: 800;
+  
 }
 #scores-btn {
-  color: #271c06;
-  font-weight: 500;
-  font-size: 3ch;
+  color: #ffb600;
+  font-weight: 800;
+  font-size: 4ch;
   text-align: center;
-  text-shadow: 3px 2px #ffb600;
-  opacity: 80%;
+  text-shadow: 2px 2px rgb(71, 68, 68);
+  
 }
 #aboutUs-btn {
-  color: #271c06;
-  font-weight: 500;
-  font-size: 3ch;
+  color: #ffae00;
+  font-weight: 800;
+  font-size: 4ch;
   text-align: center;
-  text-shadow: 3px 2px #ffb600;
-  opacity: 80%;
+  text-shadow: 3px 2px rgb(71, 68, 68);
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 600px) {
+    #maintitle {
+      margin-bottom: 16vh;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  #maintitle {
+    font-size: 6ch;
+    margin-bottom: 8vh;
+  }
+  .bouttons {
+   margin-right: auto;
+   margin-left: auto;
+  }
+}
+  @media screen and (min-width: 601px) {
+    #scores-btn{
+      margin-top: 10vh;
+    }
+    #settings-btn{
+      margin-top: 8vh;
+    }
+    body{
+      letter-spacing: 1.5ch;
+    }
+  }
