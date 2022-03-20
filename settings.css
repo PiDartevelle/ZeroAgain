@@ -3,20 +3,18 @@
 }
 
 body {
-background-image: url(sunset.jpg);
+background-image: url("assets/sunset.jpg");
 background-position-x: 50%;
 background-repeat: no-repeat;
 }
 
-header {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
 h1 {
     color: #FF00E5;
-    margin-top: 16%;
-    margin-right: 20%;
+    margin-top: 3vh;
+    text-align: center;
+    font-size: 8vh;
+    font-weight: 700;
+    text-shadow: 2px 4px lime;
 }
 
 .backHomePage{
@@ -37,10 +35,11 @@ button {
     background-color: lime;
     font-weight: bold;
     color: #FF00E5;
+    text-shadow: 2px 0.1px fuchsia;
 }
 
 .sound {
-margin: 20% 30% 0 42%;
+margin: 20% 30% 0 39%;
 }
 
 .onoff {
@@ -68,7 +67,6 @@ margin: 20% 30% 0 42%;
     margin-top: 12%;
     margin-left: 32%;
 }
-
 .rules {
     margin-top: 10%;
 }
@@ -77,24 +75,22 @@ mark {
     background-color: lime;
     text-shadow: 0px 4px 4px #00FFF0;
     color: #FF00E5;
+    text-shadow: 2px 0.1px fuchsia;
 }
 
 h2 {
-    color: black ;
-    padding-right: 0%;
-    font-size: 1em;
-    margin-left: 37%;
+    text-align: center;
+    font-size: 2.5vh;
 }
 
-p {
-    font-size: 1em;
-    opacity: 1;
-text-align: center;
+table {
+    background-color: rgba(0, 255, 0, 25%);
+    text-align: center;
 }
 
-p:hover{
-opacity: 1;
-color:rgb(0, 255, 242);
+table:hover {
+    color:rgb(0, 255, 242);
+    text-shadow: 2px 0.1px fuchsia;
 }
 
 @media screen and (min-width:700px) {
