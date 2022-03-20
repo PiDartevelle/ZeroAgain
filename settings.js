@@ -9,5 +9,5 @@ const chooseMode = document.querySelector(".choosemode");
 const buttonDiff = document.querySelector(".diff");
 
 buttonDiff.addEventListener("click", () => {
-  chooseMode.classList.toggle("show");
+  chooseMode.classList.toggle("pop");
 });
