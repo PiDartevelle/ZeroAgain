@@ -15,13 +15,13 @@ html {
     cursor: pointer;
     background-color: transparent;
     box-shadow: 5px 0px red;
+  
 }
 #laTeam{
     display: flex;
     justify-content: space-evenly;
 }
 h1 {
-    text-shadow: 10px;
     font-family: 'Syncopate';
     text-align: center;
     color: #FF0000;
