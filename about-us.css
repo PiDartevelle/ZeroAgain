@@ -52,12 +52,10 @@ article h3{
 }
 
 @media screen and (max-width: 600px) {
-    article p{
-        display: none;
-    }
-    article:hover{
-    display: initial;
-    }
+   article{
+       border: 1px solid cyan;
+       padding: 2ch;
+   }
     #laTeam{
         flex-direction: column; 
     }
