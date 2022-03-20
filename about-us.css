@@ -13,11 +13,16 @@ nav {
     align-items: center;
 }
 
-    /*@font-face {
-        src: url('fonts/MutatorSans.ttf');
-        font-family:'MutatorSans';
-        font-style: normal;
-    }*/
+/*.backHomePage{
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    background-color: transparent;
+     border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    border-left: transparent;
+    box-shadow: 5px 0px red;*/
 
 h1 {
     /*justify-content: center;
@@ -56,18 +61,13 @@ h1 {
     50% { opacity: 0; }
   }
 
-.return {
+/*.return {
     width: 100px;
     height: 100px;  
-    background-color: red;
-    /*position: absolute;*/
-}
+    position: absolute;
+}*/
 
-.return:hover {
-    background-color: chartreuse;
-}
-
-/*.retourn {
+.return {
     width: 0;
     height: 0;
     border-top: 18px solid transparent;
@@ -77,17 +77,20 @@ h1 {
     cursor: pointer;
     background-color: transparent;
     box-shadow: 5px 0px red;
-    position: absolute;
 }
+
+/*.return:hover {
+    background-color: chartreuse;
+}*/
 
 button::before {
     content:'';
-    border-bottom:23px solid black; couleur du fond derrière le bouton
+    border-bottom:23px solid black; /*couleur du fond derrière le bouton*/
     border-right: 20px solid transparent;
     position: absolute;
     left:0;
-    bottom: 0
-  }*/
+    bottom: 0;
+  }
 
 .bouton-fleche-test {
     width: 100px;
