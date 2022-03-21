@@ -52,7 +52,7 @@ h1 {
 }
 
 
-.clignote {
+/*.clignote {
     color:rgb(233, 16, 150);
     animation: clignote 2s linear infinite;
   }
@@ -61,7 +61,7 @@ h1 {
     50% { opacity: 0; }
   }
 
-/*.return {
+.return {
     width: 100px;
     height: 100px;  
     position: absolute;
