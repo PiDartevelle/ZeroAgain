@@ -1,34 +1,49 @@
-body {
 
+body {
+    position: absolute;
+    margin: 0;
+}
+
+nav {
+    width: auto;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*.backHomePage{
+    width: 0;
+    height: 0;
     cursor: pointer;
     background-color: transparent;
-    box-shadow: 5px 0px red;
-}
-/*.button {
-    color:white;
-    background:#FEDA23;
-  }*/
-
-button::before {
-    content:'';
-    border-bottom:23px solid black; /*couleur du fond derrière le bouton*/
-    border-right: 20px solid transparent;
-    position: absolute;
-    left:0;
-    bottom: 0
-  }
-
+     border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    border-left: transparent;
+    box-shadow: 5px 0px red;*/
 
 h1 {
+    /*justify-content: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+    width: auto;*/
+
+    font-style: bold;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 44px;
+    color: #FF0000;
+    font-weight: bold;
+    display: inline;
+    position: relative;
     text-shadow: 10px;
     font-family: 'Syncopate';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 44px;
-    text-align: center;
-    color: #FF0000;
     text-shadow: 0px 4px 4px #FF00E5;
+    /* pas de position!! car il y en a une absolue dans body?*/
     padding-top: 25px;
     margin: auto;
     position :relative;
@@ -41,10 +56,47 @@ h1 {
     color:rgb(233, 16, 150);
     animation: clignote 2s linear infinite;
   }
+
   @keyframes clignote {
     50% { opacity: 0; }
   }
 
+/*.return {
+    width: 100px;
+    height: 100px;  
+    position: absolute;
+}*/
+
+.return {
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    border-left: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0px red;
+}
+
+/*.return:hover {
+    background-color: chartreuse;
+}*/
+
+button::before {
+    content:'';
+    border-bottom:23px solid black; /*couleur du fond derrière le bouton*/
+    border-right: 20px solid transparent;
+    position: absolute;
+    left:0;
+    bottom: 0;
+  }
+
+.bouton-fleche-test {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+}
 img {
     position: relative;
     display: block;
@@ -68,7 +120,6 @@ article {
     margin-bottom: 1%;
     margin-left: 10%;
     margin-right: 10%;
-
 }
 
 h3 {
@@ -82,17 +133,51 @@ p {
     margin-top: 5px;
 }
 
-footer {
+header,footer {
     background-color: #000000;
+    color: white;
+    padding: 20px;
+    }
+    
     /*margin: 0;
     height: auto;
     width: 100%;
     position: absolute;
-    width: auto;*/
-    height: 500px;
+    width: auto;
+    height: 550px;*/
+    /*
+    J'ai utilisé le CodeSandBox de PierreG, mais ça n'influence pas j'ai l'impression.
+    Je n'ose pas toucher ailleurs de peur de tout refaire sauter :
+
+    html,
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+  margin: 0;
+  min-height: 100vh;
 }
 
-.return{
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+}
+
+header,
+footer {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  padding: 20px;
+}
+
+main {
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+    width: auto;
+    height: 500px;*/
+
+.return {
     width: 0;
     height: 0;
     border-top: 18px solid transparent;
