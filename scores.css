@@ -1,0 +1,71 @@
+/*body {
+    background-image: url("assets/retroscores.jpg");
+  background-position: center center;
+  font-family: "Syncopate", "Times New Roman", Times, serif;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+*/
+html { 
+  background: url("assets/retroscores.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#mainpage h1 {
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10vh;
+    font-weight: 700;
+    color: rgb(63, 236, 11);
+    text-shadow: 2px 4px #2b145b;
+    text-align: center;
+    font-family: "Syncopate", "Times New Roman", Times, serif;
+  }
+  
+  #tableau{
+    margin-top: 20vh;
+    table-layout: fixed;
+    width: 100%;
+      border-collapse: collapse;
+      color: lime;
+      text-shadow: 2px 2px #e03452;
+      margin-left: auto;
+      margin-right: auto;
+    max-width: 75%;   
+    max-height: 75%;
+    border-radius: 8%;
+    text-align: center;
+    background-color:rgba(0, 255, 0, 25%);
+    
+  }
+
+  #tableau tr {
+    font-size: 6vh;
+}
+.backHomePage{
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 30px solid yellow;
+  border-left: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: 5px 0px red;
+}
+
+@media screen and (max-width: 600px) {
+ #tableau { 
+   margin-top: 8vh;
+}
+#tableau tr{
+  font-size: 3vh;
+}
+
+}
+#mainpage h1 {
+  font-size: 8vh;
+}
