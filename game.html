@@ -5,30 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
-   <!-- <script src="tetris.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/> 
     <link href="game.css" rel="stylesheet"/>
+    <script src="tetris.js"></script>
 </head>
 <body>
     <header>
         <h1>TETRIS</h1>
+        <a href="init-accueil.html"><button class="backHomePage"></button></a>
     </header>
    <div class = "grid">
-        <canvas id = "board" class = "game-board"></canvas>
+        <div id = "board" class = "game-board">
+            <canvas id="gameBoard"></canvas>
+        </div>
         <div class = "right-column">
-            <div>
-                <p>Score : <span id = "score">0</span></p>
-                <p>Lines : <span id = "lines">0</span></p>
-                <p>Lines : <span id = "level">0</span></p>
-                <canvas id = "next" class = "next"></canvas>
+            <div class="topCanvas">
+                <p class="score">Score : <span id = "score">0</span></p>
+                <p class="lines">Lines : <span id = "lines">0</span></p>
+                <p class="level">Level : <span id = "level">0</span></p>
+                <p class="nextPiece">Next piece</p>
+               <!-- <canvas id = "next" class = "next"></canvas>-->
             </div>
             <button onclick = "play()" class = "play-button">Play</button>
         </div>
-            <div class = "button"> 
-        <button class="ArrowUp">&#9650</button>
-        <button class="ArrowDown">&#9660</button>
-        <button class="ArrowLeft">&#9664</button>
-        <button class="ArrowRight">&#9654</button>
+        <div class = "button"> 
+            <button class="ArrowUp">&#9650</button>
+            <button class="ArrowDown">&#9660</button>
+            <button class="ArrowLeft">&#9664</button>
+            <button class="ArrowRight">&#9654</button>
+        </div>
+        <div class="instructions">
+            <p class="instructionRotation">Pour faire pivoter les pièces, appuyez sur &#9650 ou &#9660.</p>
+            <p class="instructionDeplacement">Pour bouger les pièces à gauche ou à droite, appuyez sur &#9664 ou &#9654.</p>
         </div>
     </div>
     <footer></footer>
