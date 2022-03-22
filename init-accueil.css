@@ -1,6 +1,92 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+html{
+  background-image: url("assets/retroaccueil.jpg");
+  background-size: auto;
+  background-position: center center;
+  font-family: "Syncopate", "Times New Roman", Times, serif;
+  overflow-y: hidden;
+}
+#maintitle {
+  margin: auto auto;
+  font-size: 10vh;
+  font-weight: 700;
+  color: #31202e6c;
+  text-shadow: 3px 3px #ece8eb;
+  text-align: center;
+}
+.bouttons {
+  margin: 35vh 10vw;
+	display: grid;
+	grid-template-columns: repeat(10, 95vw);
+	grid-template-rows: 1fr;
+	grid-column-gap: 1rem;
+	grid-row-gap: 1rem;
+	overflow: scroll;
+	height: 50vh;
+	scroll-snap-type: both mandatory;
+	scroll-padding: 10rem;
+}
+
+.active {
+	scroll-snap-type: unset;
+}
+
+ .btn{
+	scroll-snap-align: center;
+	display: inline-block;
+  text-decoration: none;
+}
+#play-btn {
+  color: #ffae00;
+  font-weight: 900;
+  font-size: 5ch;
+  text-align: center;
+  text-shadow: 6px 3px rgb(71, 68, 68);
+  opacity: 80%;
+  margin-bottom: 3vh;
+}
+#settings-btn {
+  color: #ffae00;
+  font-size: 4ch;
+  text-align: center;
+  text-shadow: 2px 3px rgb(71, 68, 68);
+  opacity: 90%;
+  font-weight: 800; 
+}
+#scores-btn {
+  color: #ffb600;
+  font-weight: 800;
+  font-size: 4ch;
+  text-align: center;
+  text-shadow: 2px 2px rgb(71, 68, 68);
+  
+}
+#aboutUs-btn {
+  color: #ffae00;
+  font-weight: 800;
+  font-size: 4ch;
+  text-align: center;
+  text-shadow: 3px 2px rgb(71, 68, 68);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Custo générale
 éléments centrés et responsive 
-*/
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -20,10 +106,12 @@ body {
   text-shadow: 3px 3px #ece8eb;
   text-align: center;
 }
-.bouttons {
+/*.bouttons {
   line-height: 5ch;
 
 }
+*/
+/*
 .btn {
   padding: 2vh;
   margin: 1vh 1vh;
@@ -40,7 +128,7 @@ body {
   text-decoration: none;
 }
 
-
+*/
 /* /////////////////////////////////////////
 /////////////////////////////////////////
 
@@ -48,7 +136,7 @@ custo individuelle des boutons
 
 ///////////////////////////////
 ///////////////////////////////
- */
+
 #play-btn {
   color: #ffae00;
   font-weight: 900;
@@ -91,9 +179,9 @@ custo individuelle des boutons
   text-align: center;
   text-shadow: 3px 2px rgb(71, 68, 68);
 }
-
+*/
 /* MEDIA QUERIES */
-
+/*
 @media screen and (min-width: 600px) {
     #maintitle {
       margin-bottom: 16vh;
@@ -123,3 +211,4 @@ custo individuelle des boutons
       letter-spacing: 1.5ch;
     }
   }
+*/
