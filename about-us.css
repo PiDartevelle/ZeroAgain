@@ -2,15 +2,20 @@
 body {
     position: absolute;
     margin: 0;
+    background: url("licorne-neon.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 
 nav {
     width: auto;
     height: 100px;
-    background-color: rgb(0, 0, 0);
     display: flex;
-    justify-content: space-between;
-    /*align-items: center;$*/
+    /*justify-content: space-between;
+    align-items: center;$*/
 }
 
 button {
@@ -31,10 +36,10 @@ button {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: 700;
     line-height: 44px;
     color: #FF0000;
-    font-weight: bold;
     font-family: 'Syncopate';
     text-shadow: 0px 4px 4px #FF00E5;
     margin: auto;
@@ -55,21 +60,10 @@ h1 {
     bottom: 0;
   }*/
 
-.bouton-fleche-test {
-    width: 100px;
-    height: 100px;
-    background-color: #000000;
-}
 img {
     position: relative;
     display: block;
     margin: auto;
-}
-
-section {
-    background-image:url(licorne-neon.jpg);
-    background-size: 100%;
-    padding: 3%;
 }
 
 article {
@@ -97,9 +91,7 @@ p {
 }
 
 header,footer {
-    background-color: #000000;
-    color: white;
-    padding: 20px;
+    padding: 50px;
     }
     
     /*margin: 0;
@@ -113,12 +105,6 @@ header,footer {
     Je n'ose pas toucher ailleurs de peur de tout refaire sauter :
 
     html,
-body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
-  margin: 0;
-  min-height: 100vh;
-}
-
 body {
   display: flex;
   flex-direction: column;
