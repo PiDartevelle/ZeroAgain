@@ -1,29 +1,28 @@
 * {
   font-family: "Syncopate";
-}
-
-body {
-  background-image: url("assets/sunset.jpg");
-  background-position-x: 50%;
-  background-repeat: no-repeat;
+  background: url("assets/sunset.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 h1 {
-  color: #ff00e5;
   margin-top: 3vh;
+  color: #ff00e5;
   text-align: center;
   font-size: 8vh;
   font-weight: 700;
   text-shadow: 2px 4px lime;
 }
+
 button {
   cursor: pointer;
-  border: 3px solid #00fff0;
-  background-color: lime;
+  border: 3px solid lime;
   font-weight: bold;
-  color: #ff00e5;
-  text-shadow: 2px 0.1px fuchsia;
-}
+  color: #00fff0;
+  text-shadow: 3px 0.1px blue;
+  }
 
 .backHomePage {
   width: 0;
@@ -32,15 +31,18 @@ button {
   border-bottom: 18px solid transparent;
   border-right: 30px solid yellow;
   border-left: transparent;
-  cursor: pointer;
-  background-color: transparent;
   box-shadow: 5px 0px red;
   border-radius: 0;
-  opacity: 1;
 }
 
 .sound {
-  margin: 20% 30% 0 39%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1vh;
+  margin-top: 10vh;
 }
 
 .onoff {
@@ -64,29 +66,21 @@ button {
 }
 
 .diff {
-  margin-top: 12%;
-  margin-left: 32%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1vh;
+  margin-top: 10vh;
 }
+
 .rules {
-  margin-top: 10%;
-}
-
-mark {
-  background-color: lime;
-  text-shadow: 0px 4px 4px #00fff0;
-  color: #ff00e5;
-  text-shadow: 2px 0.1px fuchsia;
-  border-radius: 7%;
-}
-
-h2 {
   text-align: center;
-  font-size: 2.5vh;
+  margin-top: 5vh;
 }
-
 table {
-  background-color: rgba(0, 255, 0, 25%);
-  text-align: center;
+  margin-top: 1%;
 }
 
 table:hover {
@@ -94,51 +88,25 @@ table:hover {
   text-shadow: 2px 0.1px fuchsia;
 }
 
-@media screen and (min-width: 700px) {
-  body {
-    background-size: 100%;
-  }
-  h1 {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-  }
+/*mediaqueries !*/
+
+@media screen and (min-width: 600px) {
+
   button {
-    border-radius: 20%;
+    border-radius: 18%;
     font-size: 150%;
-    opacity: 0.8;
-    text-shadow: 3px 0.1px blue;
-  }
-  .sound {
-    margin-top: 3%;
-    margin-left: 46.5%;
-    margin-bottom: 1%;
-  }
-  .diff {
-    margin-top: 5%;
-    margin-left: 44%;
-    margin-bottom: 2%;
   }
   .show {
     margin: 0 35% 0 35%;
   }
   .pop {
-    margin: 0 35% 0 35%;
+    margin: 1% 35% 0 35%;
   }
   .rules {
-    margin-top: 5%;
-  }
-  mark {
-    opacity: 0.8;
-    text-shadow: 3px 0.1px blue;
-    border-radius: 15%;
-  }
-  h2 {
-    font-size: 3vh;
+    margin-top: 2%;
   }
   table {
     font-size: 130%;
-    table-layout: fixed;
     width: 30%;
     margin-left: 35%;
   }
