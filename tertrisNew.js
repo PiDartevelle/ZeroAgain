@@ -2,6 +2,10 @@
 
 const gameBoard = document.getElementById("gameBoard");
 const canvas = document.createElement('canvas');
+const nextPiece = document.querySelector(".nextPiece");
+const canvasNextPiece = document.createElement("canvas");
+const numberLines = document.getElementById("lines");
+const playButton = document.querySelector(".play-button");
 let largeurCanvas = gameBoard.clientWidth; // récupère la largeur en pixel de la div gameBoard
 let hauteurCanvas = gameBoard.clientHeight; // récupère la hauteur en pixel de la div gameBoard
 
@@ -18,6 +22,8 @@ let yForm = yInitial;
 
 let numForm = 0; // Numéro de la forme à afficher
 let rotation = 0; // Numéro de la rotation de la forme à afficher
+let formeSuivante = 0;
+let ctrlLigne = 0; // compteur de lignes complètées
 
 // Tableau des couleurs des formes (1: remplissage, 2: contour)
 let couleursFormes = [
@@ -165,14 +171,28 @@ const grille = new Array(hauteurGrille);
 
 // Fonction de dessin des formes. 
 // Seules les cases ou il y a un 1 dans le tableau des formes sont coloriées.
-function drawForme() {
-    for(let i = 0; i < forme[numForm][rotation].length;i++){
-        for(let j = 0; j < forme[numForm][rotation].length; j++){
-            if(forme[numForm][rotation][j][i] == 1){
-                context.fillStyle = couleursFormes[1][numForm]; // Couleur de contour de la forme
-                context.fillRect((xForm + i) * carreaux, (yForm + j) * carreaux, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
-                context.fillStyle = couleursFormes[0][numForm]; // Couleur de remplissage de la forme
-                context.fillRect((xForm + i) * carreaux + 1, (yForm + j) * carreaux + 1, carreaux - 2, carreaux - 2);
+function drawForme(numeroForme, rotationFct, xPosition, yPosition) {
+    for(let i = 0; i < forme[numeroForme][rotationFct].length;i++){
+        for(let j = 0; j < forme[numeroForme][rotationFct].length; j++){
+            if(forme[numeroForme][rotationFct][j][i] == 1){
+                context.fillStyle = couleursFormes[1][numeroForme]; // Couleur de contour de la forme
+                context.fillRect((xPosition + i) * carreaux, (yPosition + j) * carreaux, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillStyle = couleursFormes[0][numeroForme]; // Couleur de remplissage de la forme
+                context.fillRect((xPosition + i) * carreaux + 1, (yPosition + j) * carreaux + 1, carreaux - 2, carreaux - 2);
+            }
+        }
+    }
+};
+
+// Fonction qui dessine dans la partie next piece
+function drawNextPiece(numeroForme, rotationFct, xPosition, yPosition) {
+    for(let i = 0; i < forme[numeroForme][rotationFct].length;i++){
+        for(let j = 0; j < forme[numeroForme][rotationFct].length; j++){
+            if(forme[numeroForme][rotationFct][j][i] == 1){
+                contextNextPiece.fillStyle = couleursFormes[1][numeroForme]; // Couleur de contour de la forme
+                contextNextPiece.fillRect((xPosition + i) * carreaux, (yPosition + j) * carreaux, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                contextNextPiece.fillStyle = couleursFormes[0][numeroForme]; // Couleur de remplissage de la forme
+                contextNextPiece.fillRect((xPosition + i) * carreaux + 1, (yPosition + j) * carreaux + 1, carreaux - 2, carreaux - 2);
             }
         }
     }
@@ -183,14 +203,17 @@ function drawForme() {
 function refreshCanvas(){
     context.clearRect(0, 0, largeurGrille * carreaux, hauteurGrille * carreaux); // met en noir transparent tous les pixels dans le rectangle définis en supprimant tout ce qui a été dessiné avant. 
     // clearRect(coordonnée x du point de départ du rect, coordonnée y du point de départ du rect, largeur, hauteur)
-    drawForme();
+    drawForme(numForm, rotation, xForm, yForm);
     yForm++;
     if(collision()){
-        console.log('collision')
         yForm--;
         copieFormeDansLaGrille();
+        effaceLigne(verifierLignes());
         yForm = yInitial;
         xForm = xInitial;
+        rotation = 0;
+        numForm = formeSuivante;
+        formeSuivante = nouvelleForme();
     }
     drawGrille();
 
@@ -217,8 +240,6 @@ function collision(){
     console.log('enter collision function')
     for(let i = 0; i < forme[numForm][rotation].length; i++){
         for(let j = 0; j < forme[numForm][rotation].length; j++){
-            console.log('checking cell')
-            console.log(i, j)
             if(forme[numForm][rotation][j][i] === 1){ // Pour toutes les cases des formes qui sont égales à 1 
                 if(xForm < 0 || xForm + forme[numForm][rotation].length > largeurGrille){ // on autorise les mouvements de gauche à droite 
                     return true
@@ -260,19 +281,88 @@ function copieFormeDansLaGrille(){
 
 // Fonction pour afficher la grille
 function drawGrille(){
+    const currentForm = numForm;
     for(let i = 0; i < grille.length; i++){
         for(let j = 0; j < grille[i].length; j++){
-            if(grille[i][j] > -1){
                 const x = j * carreaux
                 const y = i * carreaux
-                context.fillStyle = couleursFormes[1][numForm]; // Couleur de contour de la forme
+        
+            switch(grille[i][j]){
+                case 0:
+                    context.fillStyle = couleursFormes[1][0]; // Couleur de contour de la forme
                 context.fillRect(x, y, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
-                context.fillStyle = couleursFormes[0][numForm]; // Couleur de remplissage de la forme
+                context.fillStyle = couleursFormes[0][0]; // Couleur de remplissage de la forme
                 context.fillRect(x + 1, y + 1, carreaux - 2, carreaux - 2);
+                break;
+                case 1:
+                    context.fillStyle = couleursFormes[1][1]; // Couleur de contour de la forme
+                context.fillRect(x, y, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillStyle = couleursFormes[0][1]; // Couleur de remplissage de la forme
+                context.fillRect(x + 1, y + 1, carreaux - 2, carreaux - 2);
+                break;
+                case 2:
+                    context.fillStyle = couleursFormes[1][2]; // Couleur de contour de la forme
+                context.fillRect(x, y, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillStyle = couleursFormes[0][2]; // Couleur de remplissage de la forme
+                context.fillRect(x + 1, y + 1, carreaux - 2, carreaux - 2);
+                break;
+                case 3:
+                    context.fillStyle = couleursFormes[1][3]; // Couleur de contour de la forme
+                context.fillRect(x, y, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillStyle = couleursFormes[0][3]; // Couleur de remplissage de la forme
+                context.fillRect(x + 1, y + 1, carreaux - 2, carreaux - 2);
+                break;
+                case 4:
+                    context.fillStyle = couleursFormes[1][4]; // Couleur de contour de la forme
+                context.fillRect(x, y, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillStyle = couleursFormes[0][4]; // Couleur de remplissage de la forme
+                context.fillRect(x + 1, y + 1, carreaux - 2, carreaux - 2);
+                break;
+                case 5:
+                    context.fillStyle = couleursFormes[1][5]; // Couleur de contour de la forme
+                context.fillRect(x, y, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillStyle = couleursFormes[0][5]; // Couleur de remplissage de la forme
+                context.fillRect(x + 1, y + 1, carreaux - 2, carreaux - 2);
+                break;
+                case 6:
+                    context.fillStyle = couleursFormes[1][6]; // Couleur de contour de la forme
+                context.fillRect(x, y, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillStyle = couleursFormes[0][6]; // Couleur de remplissage de la forme
+                context.fillRect(x + 1, y + 1, carreaux - 2, carreaux - 2);
+                break;
             }
         }
     }
-}
+};
+
+// Fonction qui envoie un numForm aléatoire
+function nouvelleForme(){
+    return Math.floor(Math.random() * (forme.length - 0) + 0);
+};
+
+// Fonction de rafraichissement du canvas nouvelle piece
+function refershNextPiece(){
+    contextNextPiece.clearRect(0, 0, 4 * carreaux, 4 * carreaux);
+    drawNextPiece(formeSuivante, 0, 0, 0);
+};
+
+// Fonction qui efface la ligne qui est pleine
+function effaceLigne(ligneAEffacer){
+    grille.splice(ligneAEffacer, 1);
+    grille.unshift([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]);
+    ctrlLigne++;
+    return grille;
+};
+
+// Fonction qui vérifie si une ligne est complétée
+function verifierLignes(){
+    for(let i = 0; i < hauteurGrille; i++){
+        if(grille[i].every(valeur => valeur > -1)){
+            return i;
+        }
+    }
+};
+
 // ---------- CODE ---------- //
 
 // initialisation du canvas
@@ -281,9 +371,21 @@ canvas.height = hauteurGrille * carreaux;
 canvas.style.border = "1px solid";
 gameBoard.appendChild(canvas);
 const context = canvas.getContext('2d');
+canvasNextPiece.width = 4 * carreaux;
+canvasNextPiece.height = 4 * carreaux;
+nextPiece.appendChild(canvasNextPiece);
+const contextNextPiece = canvasNextPiece.getContext('2d');
+
+playButton.addEventListener("click", () =>{
+numForm = nouvelleForme();
+formeSuivante = nouvelleForme();
 initGrille();
 refreshCanvas();
 setInterval(refreshCanvas, delay);
+refershNextPiece();
+setInterval(refershNextPiece, delay);
+numberLines.innerText = ctrlLigne;
+});
 
 // Gestion des évènements clavier
 window.addEventListener("keydown", function(event){
