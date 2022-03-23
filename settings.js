@@ -11,3 +11,10 @@ const buttonDiff = document.querySelector(".diff");
 buttonDiff.addEventListener("click", () => {
   chooseMode.classList.toggle("pop");
 });
+
+const btn = document.getElementById("rules");
+const rulesNeon = document.querySelector(".neon");
+
+btn.addEventListener("click", () => {
+  rulesNeon.classList.toggle("style");
+});
