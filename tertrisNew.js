@@ -25,8 +25,23 @@ let couleursFormes = [
     ["#FFD700",  "#FF00FF",  "#00FFFF",  "#FF0000",  "#FF4500", "#8A2BE2",  "#00FF00"]
 ];
 
+function getShapeYSize(matrix) {
+    let size = matrix.length;
+    for (let rowNum = matrix.length - 1; rowNum >= 0; rowNum-=1) {
+        let rowIsEmpty = true
+        for (let colNum = 0; colNum < matrix.length; colNum+=1) {
+            if(matrix[rowNum][colNum] === 1) {
+                rowIsEmpty = false
+            }
+        }
+        if (rowIsEmpty) size -= 1
+        else return size
+    }
+    return size
+}
+
 // Tableau de définition des formes
-let forme = new Array();
+let forme = new Array(); // const shapes = []
 forme[0]= [ // Forme 1
     [	// rotation 0
         [0,0,0],
@@ -170,11 +185,21 @@ function refreshCanvas(){
     // clearRect(coordonnée x du point de départ du rect, coordonnée y du point de départ du rect, largeur, hauteur)
     drawForme();
     yForm++;
+    if(collision()){
+        console.log('collision')
+        yForm--;
+        copieFormeDansLaGrille();
+        yForm = yInitial;
+        xForm = xInitial;
+    }
+    drawGrille();
+
+    /*
     //console.log(yForm);
     //console.log(collision());
        /*if(yForm > hauteurGrille){
        yForm = 0;
-    }*/
+    }
     if(collision()){
         yForm--;
         copieFormeDansLaGrille();
@@ -184,28 +209,31 @@ function refreshCanvas(){
         xForm = xInitial;
         rotation = 0;
     }
+    */
 };
 
 // Fonction de gestion des collisions
 function collision(){
-        for(let i = 0; i < forme[numForm][rotation].length; i++){
-            for(let j = 0; j < forme[numForm][rotation].length; j++){
-                if(forme[numForm][rotation][j][i] == 1){ // Pour toutes les cases des formes qui sont égales à 1 
-                    if(xForm < 0 || xForm + forme[numForm][rotation].length > largeurGrille){ // on autorise les mouvements de gauche à droite 
-                        return true;
-                    }
-                    if(yForm + forme[numForm][rotation].length > hauteurGrille){ // on autorise la decente de la forme jusqu'au bas de la grille
-                        return true;
-                    } 
-                    else{
-                        return false;
-                    }
-                    return false; // dnas les autres cas, le mouvement est impossible
+    console.log('enter collision function')
+    for(let i = 0; i < forme[numForm][rotation].length; i++){
+        for(let j = 0; j < forme[numForm][rotation].length; j++){
+            console.log('checking cell')
+            console.log(i, j)
+            if(forme[numForm][rotation][j][i] === 1){ // Pour toutes les cases des formes qui sont égales à 1 
+                if(xForm < 0 || xForm + forme[numForm][rotation].length > largeurGrille){ // on autorise les mouvements de gauche à droite 
+                    return true
                 }
+                const hasHitFloor = yForm + getShapeYSize(forme[numForm][rotation]) > hauteurGrille;
+                if (hasHitFloor) return true
+                
+                if(grille[yForm + j][xForm + i] != -1 ){
+                    return true
+                }    
             }
         }
-
-    };
+    }
+    return false;
+};
 
 // Fonction d'initialisation de la grille
 function initGrille(){
@@ -224,7 +252,7 @@ function copieFormeDansLaGrille(){
     for(let i = 0; i < forme[numForm][rotation].length; i++){
         for(let j = 0; j < forme[numForm][rotation].length; j++){
             if(forme[numForm][rotation][j][i] == 1){
-                grille[yForm][xForm] = numForm;
+                grille[yForm + j][xForm + i] = numForm;
             }
         }
     }
@@ -235,10 +263,12 @@ function drawGrille(){
     for(let i = 0; i < grille.length; i++){
         for(let j = 0; j < grille[i].length; j++){
             if(grille[i][j] > -1){
+                const x = j * carreaux
+                const y = i * carreaux
                 context.fillStyle = couleursFormes[1][numForm]; // Couleur de contour de la forme
-                context.fillRect((xForm + i) * carreaux, (yForm + j) * carreaux, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
+                context.fillRect(x, y, carreaux, carreaux); // fillRect(coordonnée x, coordonnée y, largeur, hauteur)
                 context.fillStyle = couleursFormes[0][numForm]; // Couleur de remplissage de la forme
-                context.fillRect((xForm + i) * carreaux + 1, (yForm + j) * carreaux + 1, carreaux - 2, carreaux - 2);
+                context.fillRect(x + 1, y + 1, carreaux - 2, carreaux - 2);
             }
         }
     }
@@ -251,9 +281,9 @@ canvas.height = hauteurGrille * carreaux;
 canvas.style.border = "1px solid";
 gameBoard.appendChild(canvas);
 const context = canvas.getContext('2d');
+initGrille();
 refreshCanvas();
 setInterval(refreshCanvas, delay);
-initGrille();
 
 // Gestion des évènements clavier
 window.addEventListener("keydown", function(event){
