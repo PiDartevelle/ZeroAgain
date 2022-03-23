@@ -77,16 +77,18 @@ button {
 
 .rules {
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 10vh;
 }
 table {
   margin-top: 1%;
+  display: none;
 }
 
-table:hover {
+.style {
+  display: flex;
   color: rgb(0, 255, 242);
   text-shadow: 2px 0.1px fuchsia;
-}
+} 
 
 /*mediaqueries !*/
 
@@ -101,9 +103,6 @@ table:hover {
   }
   .pop {
     margin: 1% 35% 0 35%;
-  }
-  .rules {
-    margin-top: 2%;
   }
   table {
     font-size: 130%;
