@@ -11,3 +11,6 @@ const buttonDiff = document.querySelector(".diff");
 buttonDiff.addEventListener("click", () => {
   chooseMode.classList.toggle("pop");
 });
+
+const audioElement = document.getElementById("audio");
+audioElement.play();
