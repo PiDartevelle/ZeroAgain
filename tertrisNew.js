@@ -1,3 +1,17 @@
+// Concernant la musique//
+const audio = document.querySelector(".audio");
+const musicOnOff = document.querySelector(".music");
+
+musicOnOff.addEventListener("click", () => {
+  audio.play();
+  if (musicOnOff.innerText === "Play") {
+    musicOnOff.innerText = "Stop";
+  } else {
+    audio.pause();
+    musicOnOff.innerText = "Play";
+  }
+});
+
 // ---------- DECLARATION DES VARIABLES ---------- //
 
 const gameBoard = document.getElementById("gameBoard");

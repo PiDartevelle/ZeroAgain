@@ -31,7 +31,7 @@ btnOff.addEventListener("click", () => {
   audio.pause();
 });
 
-const musicOnOff = document.querySelector(".music");
+/* const musicOnOff = document.querySelector(".music");
 
 musicOnOff.addEventListener("click", () => {
   audio.play();
@@ -43,4 +43,4 @@ musicOnOff.addEventListener("click", () => {
   }
 });
 
-localStorage.setItem("audio", "audio");
+localStorage.setItem("audio", "audio"); */
