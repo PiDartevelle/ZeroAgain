@@ -234,7 +234,7 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        grid-rows: 1 / 2;
+        grid-row: 1 / 2;
         grid-column: 1 / 2;
         color: white;
         text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
