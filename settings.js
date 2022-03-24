@@ -35,4 +35,11 @@ const musicOnOff = document.querySelector(".music");
 
 musicOnOff.addEventListener("click", () => {
   audio.play();
+  if (musicOnOff.innerText === "Play") {
+    musicOnOff.innerText = "Stop";
+  } else {
+    audio.pause();
+    musicOnOff.innerText = "Play";
+  }
 });
+localStorage.setItem("audio", "music");
