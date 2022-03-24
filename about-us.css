@@ -1,6 +1,5 @@
 
 html{
-    position: absolute;
     margin: 0;
     background: url("licorne-neon.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -51,24 +50,35 @@ section article {
 }
 article{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 90vw;
+    max-width: 90w;
 }
 h3 {
-    margin-left: 15px;
-    padding: 2%;
-    display: inline;
+    padding: 2ch;   
 }
-
-p {
-    margin: 1%;
-    margin-top: 5px;
+p{
+    padding: 2ch;
 }
 
 header,footer {
     padding: 50px;
     }
+input{
+    background-color: #a005b5;
+    opacity: 50%;
+}
+textarea{
+    background-color: #a005b5;
+    opacity: 50%;
+}
+#submit-btn{
+    background-color: #dbc1ee;
+    opacity: 50%;
+}
+
+
     
     /*margin: 0;
     height: auto;
@@ -113,3 +123,17 @@ main {
     background-color: transparent;
     box-shadow: 5px 0px red;
 }
+#contact-form-id{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    h3{
+        padding: 2vw 1vw;
+    }
+    p{
+        padding: 2vw 1vw;
+    }
+}
+
