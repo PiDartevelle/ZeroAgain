@@ -13,13 +13,19 @@
     <link rel="stylesheet" href="settings.css" />
   </head>
   <body>
-    <a href="init-accueil.html"><button class="backHomePage"></button></a>
+    <nav>
+      <a href="init-accueil.html"><button class="backHomePage"></button></a>
+      <button class="music">Play</button>
+  </nav>
+    <audio loop class="audio">
+      <source src="/assets/minitheme.mp3"  type="audio/mp3">
+    </audio>
     <h1>Settings</h1>
     <div>
       <button class="sound">Sound</button>
       <div class="onoff">
-        <button>On</button>
-        <button>Off</button>
+        <button class="on">On</button>
+        <button class="off">Off</button>
       </div>
     </div>
     <div>
