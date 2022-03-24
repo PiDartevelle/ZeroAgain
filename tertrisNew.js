@@ -1,4 +1,4 @@
-// Concernant la musique//
+/*// Concernant la musique//
 const audio = document.querySelector(".audio");
 const musicOnOff = document.querySelector(".music");
 
@@ -10,7 +10,7 @@ musicOnOff.addEventListener("click", () => {
     audio.pause();
     musicOnOff.innerText = "Play";
   }
-});
+});*/
 
 // ---------- DECLARATION DES VARIABLES ---------- //
 
