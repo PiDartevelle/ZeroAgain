@@ -46,7 +46,7 @@ section article {
     border-radius: 5%;
     font-weight: 800;
     color: whitesmoke;
-    margin: 2%;
+    margin: 2% 20vw;
 }
 article{
     display: flex;
