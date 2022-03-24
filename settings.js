@@ -12,9 +12,10 @@ buttonDiff.addEventListener("click", () => {
   chooseMode.classList.toggle("pop");
 });
 
-const btn = document.getElementById("rules");
-const rulesNeon = document.querySelector(".neon");
+  const btn = document.getElementById("rules");
+  const rulesNeon = document.querySelector(".neon");
 
+<<<<<<< HEAD
 btn.addEventListener("click", () => {
   rulesNeon.classList.toggle("style");
 });
@@ -43,3 +44,8 @@ musicOnOff.addEventListener("click", () => {
   }
 });
 localStorage.setItem("audio", "music");
+=======
+  btn.addEventListener("click", () => {
+    rulesNeon.classList.toggle("style");
+  });
+>>>>>>> dev
