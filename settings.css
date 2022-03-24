@@ -35,6 +35,18 @@ button {
   border-radius: 0;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.music {
+  width: 7.5vh;
+  height: 5vh;
+  font-size: 1.5vh;
+}
+
 .sound {
   margin-left: auto;
   margin-right: auto;
