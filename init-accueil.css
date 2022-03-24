@@ -1,7 +1,7 @@
 /* Custo générale
 éléments centrés et responsive 
 */
-*{
+* {
   box-sizing: border-box;
   margin: 0;
 }
@@ -12,7 +12,6 @@ body {
   font-family: "Syncopate", "Times New Roman", Times, serif;
 }
 #maintitle {
-  
   margin: 2vh auto 3vh auto;
   font-size: 10vh;
   font-weight: 700;
@@ -22,7 +21,6 @@ body {
 }
 .bouttons {
   line-height: 5ch;
-
 }
 .btn {
   padding: 2vh;
@@ -39,7 +37,6 @@ body {
   margin-bottom: 1vh;
   text-decoration: none;
 }
-
 
 /* /////////////////////////////////////////
 /////////////////////////////////////////
@@ -63,9 +60,15 @@ custo individuelle des boutons
   transition: none;
 }
 @keyframes clignoter {
-  0%   { opacity:1; }
-  40%   {opacity:0; }
-  100% { opacity:1; }
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #settings-btn {
   color: #ffae00;
@@ -74,7 +77,6 @@ custo individuelle des boutons
   text-shadow: 2px 3px rgb(71, 68, 68);
   opacity: 90%;
   font-weight: 800;
-  
 }
 #scores-btn {
   color: #ffb600;
@@ -82,7 +84,6 @@ custo individuelle des boutons
   font-size: 4ch;
   text-align: center;
   text-shadow: 2px 2px rgb(71, 68, 68);
-  
 }
 #aboutUs-btn {
   color: #ffae00;
@@ -95,12 +96,10 @@ custo individuelle des boutons
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 600px) {
-    #maintitle {
-      margin-bottom: 16vh;
-    }
+  #maintitle {
+    margin-bottom: 16vh;
+  }
 }
-
-
 
 @media screen and (max-width: 600px) {
   #maintitle {
@@ -108,18 +107,18 @@ custo individuelle des boutons
     margin-bottom: 8vh;
   }
   .bouttons {
-   margin-right: auto;
-   margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
-  @media screen and (min-width: 601px) {
-    #scores-btn{
-      margin-top: 10vh;
-    }
-    #settings-btn{
-      margin-top: 8vh;
-    }
-    body{
-      letter-spacing: 1.5ch;
-    }
+@media screen and (min-width: 601px) {
+  #scores-btn {
+    margin-top: 10vh;
   }
+  #settings-btn {
+    margin-top: 8vh;
+  }
+  body {
+    letter-spacing: 1.5ch;
+  }
+}
