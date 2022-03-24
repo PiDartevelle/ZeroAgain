@@ -1,6 +1,6 @@
 * {
   font-family: "Syncopate";
-  background: url("assets/sunset.jpg")no-repeat center center fixed;
+  background: url("assets/sunset.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,7 +22,7 @@ button {
   font-weight: bold;
   color: #00fff0;
   text-shadow: 3px 0.1px blue;
-  }
+}
 
 .backHomePage {
   width: 0;
@@ -100,12 +100,11 @@ table {
   display: flex;
   color: rgb(0, 255, 242);
   text-shadow: 2px 0.1px fuchsia;
-} 
+}
 
 /*mediaqueries !*/
 
 @media screen and (min-width: 600px) {
-
   button {
     border-radius: 18%;
     font-size: 150%;
