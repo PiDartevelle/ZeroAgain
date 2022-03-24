@@ -10,6 +10,7 @@ const score = document.getElementById("score");
 let largeurCanvas = gameBoard.clientWidth; // récupère la largeur en pixel de la div gameBoard
 let hauteurCanvas = gameBoard.clientHeight; // récupère la hauteur en pixel de la div gameBoard
 
+
 let delay = 300; // délai de rafraichissement de la fonction refreshCanvas
 const largeurGrille = 14; // Nombre de cases en largeur
 const hauteurGrille = 28; // Nombre de cases en hauteur
@@ -458,5 +459,3 @@ window.addEventListener("keydown", function(event){
             break;
     }
 });
-
-
