@@ -6,6 +6,7 @@ const nextPiece = document.querySelector(".nextPiece");
 const canvasNextPiece = document.createElement("canvas");
 const numberLines = document.getElementById("lines");
 const playButton = document.querySelector(".play-button");
+const score = document.getElementById("score");
 let largeurCanvas = gameBoard.clientWidth; // récupère la largeur en pixel de la div gameBoard
 let hauteurCanvas = gameBoard.clientHeight; // récupère la hauteur en pixel de la div gameBoard
 
@@ -14,6 +15,8 @@ const largeurGrille = 14; // Nombre de cases en largeur
 const hauteurGrille = 28; // Nombre de cases en hauteur
 // const carreaux = largeurCanvas / largeurGrille; //Taille en pixel d'une case de la grille
 const carreaux = hauteurCanvas / hauteurGrille;
+const largeurDiv = largeurGrille * carreaux;
+gameBoard.style.width = `${largeurDiv}px`;
 
 const xInitial = 5; // Position de départ de la forme sur la grille
 const yInitial = 0; // Position de départ de la forme sur la grille
@@ -24,11 +27,13 @@ let numForm = 0; // Numéro de la forme à afficher
 let rotation = 0; // Numéro de la rotation de la forme à afficher
 let formeSuivante = 0;
 let ctrlLigne = 0; // compteur de lignes complètées
+let scoreNb = 0;
+let verifPourComptes = false;
 
 // Tableau des couleurs des formes (1: remplissage, 2: contour)
 let couleursFormes = [
-    ["#00FF00", "#FFD700", "#FF00FF", "#00FFFF", "#FF0000", "#FF4500", "#8A2BE2"],
-    ["#FFD700",  "#FF00FF",  "#00FFFF",  "#FF0000",  "#FF4500", "#8A2BE2",  "#00FF00"]
+    ["#3300FF", "#33FF00", "#FF0000", "#9C27B0", "#FF9900", "#FFFF00", "#66FFFF"],
+    ["#17202A",  "#17202A",  "#17202A",  "#17202A",  "#17202A", "#17202A",  "#17202A"]
 ];
 
 function getShapeYSize(matrix) {
@@ -206,9 +211,18 @@ function refreshCanvas(){
     drawForme(numForm, rotation, xForm, yForm);
     yForm++;
     if(collision()){
+        if(yForm <= 1){
+            gameOver();
+            return;
+        };
         yForm--;
         copieFormeDansLaGrille();
         effaceLigne(verifierLignes());
+        if(verifPourComptes){
+            ctrlLigne++;
+            numberLines.innerText = ctrlLigne;
+            scoreCount();
+        };
         yForm = yInitial;
         xForm = xInitial;
         rotation = 0;
@@ -216,23 +230,6 @@ function refreshCanvas(){
         formeSuivante = nouvelleForme();
     }
     drawGrille();
-
-    /*
-    //console.log(yForm);
-    //console.log(collision());
-       /*if(yForm > hauteurGrille){
-       yForm = 0;
-    }
-    if(collision()){
-        yForm--;
-        copieFormeDansLaGrille();
-        drawForme();
-        console.table(grille);
-        yForm = yInitial;
-        xForm = xInitial;
-        rotation = 0;
-    }
-    */
 };
 
 // Fonction de gestion des collisions
@@ -342,15 +339,18 @@ function nouvelleForme(){
 
 // Fonction de rafraichissement du canvas nouvelle piece
 function refershNextPiece(){
-    contextNextPiece.clearRect(0, 0, 4 * carreaux, 4 * carreaux);
-    drawNextPiece(formeSuivante, 0, 0, 0);
+    contextNextPiece.clearRect(0, 0, 6 * carreaux, 6 * carreaux);
+    drawNextPiece(formeSuivante, 0, 1, 2);
 };
 
 // Fonction qui efface la ligne qui est pleine
 function effaceLigne(ligneAEffacer){
+    verifPourComptes = false;
     grille.splice(ligneAEffacer, 1);
+    if(grille[0].length < 14){
+        verifPourComptes = true;
+    };
     grille.unshift([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]);
-    ctrlLigne++;
     return grille;
 };
 
@@ -363,6 +363,25 @@ function verifierLignes(){
     }
 };
 
+// Fonction de game over
+function gameOver(){
+    clearTimeout(refreshCanvas);
+    alert("GAME OVER");
+}
+
+// Fonction score
+function scoreCount(){
+    if(ctrlLigne < 10){
+    scoreNb = scoreNb + 10
+    }
+    if(ctrlLigne >= 10 && ctrlLigne < 30){
+        scoreNb = scoreNb + 30;
+    }
+    if(ctrlLigne >= 30){
+        scoreNb = scoreNb + 50;
+    }
+    score.innerText = scoreNb;
+}
 // ---------- CODE ---------- //
 
 // initialisation du canvas
@@ -371,10 +390,11 @@ canvas.height = hauteurGrille * carreaux;
 canvas.style.border = "1px solid";
 gameBoard.appendChild(canvas);
 const context = canvas.getContext('2d');
-canvasNextPiece.width = 4 * carreaux;
-canvasNextPiece.height = 4 * carreaux;
+canvasNextPiece.width = 6 * carreaux;
+canvasNextPiece.height = 6 * carreaux;
 nextPiece.appendChild(canvasNextPiece);
 const contextNextPiece = canvasNextPiece.getContext('2d');
+canvasNextPiece.style.border = "1px solid";
 
 playButton.addEventListener("click", () =>{
 numForm = nouvelleForme();
@@ -384,7 +404,6 @@ refreshCanvas();
 setInterval(refreshCanvas, delay);
 refershNextPiece();
 setInterval(refershNextPiece, delay);
-numberLines.innerText = ctrlLigne;
 });
 
 // Gestion des évènements clavier
