@@ -43,4 +43,4 @@ musicOnOff.addEventListener("click", () => {
   }
 });
 
-localStorage.setItem("audio", "music");
+localStorage.setItem("audio", "audio");
