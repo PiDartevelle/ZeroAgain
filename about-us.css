@@ -17,12 +17,6 @@ nav {
     /*justify-content: space-between;
     align-items: center;$*/
 }
-
-button {
-    margin-top: 25px;
-    position: absolute;
-}
-
 .backHomePage {
     width: 0;
     height: 0;
@@ -45,40 +39,22 @@ h1 {
     margin: auto;
 }
 
-/*.return {
-    width: 100px;
-    height: 100px;  
-    position: absolute;
-}*/
-
-/*button::before {
-    content:'';
-    border-bottom:23px solid black; /*couleur du fond derrière le bouton
-    border-right: 20px solid transparent;
-    position: absolute;
-    left:0;
-    bottom: 0;
-  }*/
-
-img {
-    position: relative;
-    display: block;
-    margin: auto;
-}
-
-article {
+section article {
     width: auto;
     background-color: rgb(17, 13, 8);
     opacity: 0.75;
-    /*margin: 5%,0;*/
-    padding: 2%;
+    padding: 5rem;
+    border-radius: 5%;
+    font-weight: 800;
     color: whitesmoke;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 2%;
 }
-
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+}
 h3 {
     margin-left: 15px;
     padding: 2%;
