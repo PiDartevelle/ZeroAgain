@@ -89,6 +89,9 @@ html{
     margin-bottom: 1vh;
     text-decoration: none;
   }
+  .bouttons{
+    display:flex;
+  }
 }
 
 
