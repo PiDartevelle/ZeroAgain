@@ -13,25 +13,38 @@
         <a href="init-accueil.html"><button class="backHomePage"></button></a>
         <h1>ABOUT US</h1> 
     </nav>
-    <section>
-        <img class="team" src="assets/photo-jon.png" alt="Photo de l'équipe">            
+    <section class="articles">           
         <article>
             <h3>Jon</h3>
-            <p class ="Jon">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio in explicabo et, est similique pariatur non debitis tenetur repellendus laudantium magnam reprehenderit ab illum. Officiis ducimus magnam cumque sit voluptatum!</p>
+            <p class ="Jon">S'est retrouvé seul à coder "le code le plus hardcore jamais trouvé sur un P1". Oui, seul.</p>
         </article>
         <article>
             <h3>Pierre</h3>
-            <p class ="Pierre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam deserunt, labore reprehenderit dolores laboriosam ipsa commodi magnam earum impedit, quo libero quas! Perferendis unde cum, ut error repudiandae veritatis soluta?</p>
+            <p class ="Pierre">N'a pas grand chose à dire et de toute façon il trouve ca chelou de s'exposer sur le net x)</p>
         </article> 
         <article>
             <h3>Christelle</h3>
-            <p class ="Christelle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam quis dignissimos neque perspiciatis doloribus dicta dolorum error accusamus blanditiis quasi autem voluptatum, rem possimus tempore quia distinctio pariatur perferendis.</p>
+            <p class ="Christelle">Ceci est un paragraphe nul. Il est court et c'est très pratique pour dire pas grand chose!</p>
         </article>
         <article>
             <h3>Mylène</h3>
             <p class ="Mylène">Préfère les licornes au tunning, n'a encore jamais Drive.... Aime "le chocolat, L'H... et la Vodka!"" #Tétris!</p>
         </article>
+        <article class="contact-form">
+            <h3>Contact Us here!</h3>
+        <form id="contact-form-id" >
+            <label for="userFirstName">Prénom</label>
+            <input id="userFirstName" type="text" placeholder="xxx">
+            <label for="userLastName">Nom</label>
+            <input id="userLastName" type="text" placeholder="xxx">
+            <label for="userMail">Mail</label>
+            <input id="userMail" type="email" placeholder="@">
+            <label for="sendMessage">Votre Message</label>
+            <textarea id="sendMessage" placeholder="Whatever's on your mind,really !"></textarea>
+            <button type="button" id="submit-btn"> Send feedback </button>
+        </form>
+    </article>
     </section>
-    <footer></footer>
+    <script src="about-us.js"></script>
 </body>
 </html>

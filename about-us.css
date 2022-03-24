@@ -1,6 +1,5 @@
 
-body {
-    position: absolute;
+html{
     margin: 0;
     background: url("assets/licorne-neon.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -17,11 +16,6 @@ nav {
     /*justify-content: space-between;
     align-items: center;$*/
 }
-
-button {
-    margin-top: 25px;
-}
-
 .backHomePage {
     width: 0;
     height: 0;
@@ -44,44 +38,102 @@ h1 {
     margin: auto;
 }
 
-@media screen and (min-width: 600px) {
-    h1 { 
-        font-size: 60px;
-   }
-}   
-/*en dessous de 350 px le boutton mange le titre...*/
-
-img {
-    position: relative;
-    display: block;
-    margin: auto;
-    margin-bottom: 3%;
-
-}
-
-article {
+section article {
     width: auto;
     background-color: rgb(17, 13, 8);
     opacity: 0.75;
-    padding: 2%;
+    padding: 5rem;
+    border-radius: 5%;
+    font-weight: 800;
     color: whitesmoke;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 2% 20vw;
 }
-
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90w;
+}
 h3 {
-    margin-left: 15px;
-    padding: 2%;
-    display: inline;
+    padding: 2ch;   
+}
+p{
+    padding: 2ch;
 }
 
-p {
-    margin: 1%;
-    margin-top: 5px;
-}
-
-footer {
+header,footer {
     padding: 50px;
+    }
+input{
+    background-color: #a005b5;
+    opacity: 50%;
 }
+textarea{
+    background-color: #a005b5;
+    opacity: 50%;
+}
+#submit-btn{
+    background-color: #dbc1ee;
+    opacity: 50%;
+}
+
+
+    
+    /*margin: 0;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    width: auto;
+    height: 550px;*/
+    /*
+    J'ai utilisé le CodeSandBox de PierreG, mais ça n'influence pas j'ai l'impression.
+    Je n'ose pas toucher ailleurs de peur de tout refaire sauter :
+
+    html,
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+}
+
+header,
+footer {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  padding: 20px;
+}
+
+main {
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+    width: auto;
+    height: 500px;*/
+
+.return {
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    border-left: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0px red;
+}
+#contact-form-id{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    h3{
+        padding: 2vw 1vw;
+    }
+    p{
+        padding: 2vw 1vw;
+    }
+}
+
