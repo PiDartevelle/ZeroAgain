@@ -30,7 +30,7 @@ nav {
 
 h1 {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 44px;
     color: #FF0000;
     font-family: 'Syncopate';
@@ -66,11 +66,13 @@ header,footer {
     padding: 50px;
     }
 input{
-    background-color: #a005b5;
     opacity: 50%;
+    font-weight: 400;
+    background-color: #dbc1ee;
+    }
 }
 textarea{
-    background-color: #a005b5;
+    background-color: #dbc1ee;
     opacity: 50%;
 }
 #submit-btn{
@@ -127,6 +129,7 @@ main {
     display: flex;
     flex-direction: column;
 }
+
 
 @media screen and (max-width: 600px) {
     h3{
