@@ -10,7 +10,7 @@ const userMessage = document.getElementById('sendMessage');
 submitBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     console.log(userFirstName.value, userMail.value);
-    alert('Thank you for taking the time, we will be in touch!');
+    alert(`Thank you for taking the time ${userFirstName.value}, we will be in touch!`);
     userFirstName.value = "";
     userLastName.value = "";
     userMail.value = "";
