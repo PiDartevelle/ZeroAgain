@@ -42,11 +42,11 @@ section article {
     width: auto;
     background-color: rgb(17, 13, 8);
     opacity: 0.75;
-    padding: 5rem;
+    padding: 2rem;
     border-radius: 5%;
     font-weight: 800;
     color: whitesmoke;
-    margin: 2% 20vw;
+    margin: 2% 10vw;
 }
 article{
     display: flex;
@@ -130,10 +130,13 @@ main {
 
 @media screen and (max-width: 600px) {
     h3{
-        padding: 2vw 1vw;
+        padding: 1vw 1vw;
     }
     p{
-        padding: 2vw 1vw;
+        padding: 1vw 1vw;
+    }
+    article {
+        margin-left: 2cw;
     }
 }
 
