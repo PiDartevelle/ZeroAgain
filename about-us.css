@@ -1,6 +1,5 @@
 
-body {
-    position: absolute;
+html{
     margin: 0;
     background: url("assets/licorne-neon.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -14,14 +13,7 @@ nav {
     height: 100px;
     display: flex;
     margin-bottom: 5%;
-    /*justify-content: space-between;
-    align-items: center;$*/
 }
-
-button {
-    margin-top: 25px;
-}
-
 .backHomePage {
     width: 0;
     height: 0;
@@ -36,7 +28,7 @@ button {
 
 h1 {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 44px;
     color: #FF0000;
     font-family: 'Syncopate';
@@ -44,44 +36,73 @@ h1 {
     margin: auto;
 }
 
-@media screen and (min-width: 600px) {
-    h1 { 
-        font-size: 60px;
-   }
-}   
-/*en dessous de 350 px le boutton mange le titre...*/
-
-img {
-    position: relative;
-    display: block;
-    margin: auto;
-    margin-bottom: 3%;
-
-}
-
-article {
+section article {
     width: auto;
     background-color: rgb(17, 13, 8);
     opacity: 0.75;
-    padding: 2%;
+    padding: 2rem;
+    border-radius: 5%;
+    font-weight: 800;
     color: whitesmoke;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 2% 10vw;
 }
-
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90w;
+}
 h3 {
-    margin-left: 15px;
-    padding: 2%;
-    display: inline;
+    padding: 2ch;   
+}
+p{
+    padding: 2ch;
 }
 
-p {
-    margin: 1%;
-    margin-top: 5px;
-}
-
-footer {
+header,footer {
     padding: 50px;
+    }
+input{
+    opacity: 50%;
+    font-weight: 400;
+    background-color: #dbc1ee;
+    }
+
+textarea{
+    background-color: #dbc1ee;
+    opacity: 50%;
 }
+#submit-btn{
+    background-color: #dbc1ee;
+    opacity: 50%;
+}
+.return {
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 30px solid yellow;
+    border-left: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 5px 0px red;
+}
+#contact-form-id{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 600px) {
+    h3{
+        padding: 1vw 1vw;
+    }
+    p{
+        padding: 1vw 1vw;
+    }
+    article {
+        margin-left: 2cw;
+    }
+}
+
