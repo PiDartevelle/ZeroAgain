@@ -7,7 +7,7 @@
     <title>Game</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/> 
     <link href="game.css" rel="stylesheet"/>
-    <script src="tetris.js"></script>
+    <script src="tertrisNew.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,16 +15,15 @@
         <a href="init-accueil.html"><button class="backHomePage"></button></a>
     </header>
    <div class = "grid">
-        <div id = "board" class = "game-board">
-            <canvas id="gameBoard"></canvas>
+        <div id = "gameBoard" class = "game-board">
+            <div id="gameOver"></div>
         </div>
         <div class = "right-column">
             <div class="topCanvas">
                 <p class="score">Score : <span id = "score">0</span></p>
                 <p class="lines">Lines : <span id = "lines">0</span></p>
                 <p class="level">Level : <span id = "level">0</span></p>
-                <p class="nextPiece">Next piece</p>
-               <!-- <canvas id = "next" class = "next"></canvas>-->
+                <div class="nextPiece"></div>
             </div>
             <button onclick = "play()" class = "play-button">Play</button>
         </div>
@@ -35,8 +34,8 @@
             <button class="ArrowRight">&#9654</button>
         </div>
         <div class="instructions">
-            <p class="instructionRotation">Pour faire pivoter les pièces, appuyez sur &#9650 ou &#9660.</p>
-            <p class="instructionDeplacement">Pour bouger les pièces à gauche ou à droite, appuyez sur &#9664 ou &#9654.</p>
+            <p class="instructionRotation">Rotation : &#9650 ou &#9660.</p>
+            <p class="instructionDeplacement">Mouvements latéraux : &#9664 ou &#9654.</p>
         </div>
     </div>
     <footer></footer>
