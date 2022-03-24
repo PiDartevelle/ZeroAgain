@@ -2,25 +2,24 @@
 body {
     position: absolute;
     margin: 0;
-    background: url("licorne-neon.jpg") no-repeat center center fixed; 
+    background: url("assets/licorne-neon.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-
 nav {
     width: auto;
     height: 100px;
     display: flex;
+    margin-bottom: 5%;
     /*justify-content: space-between;
     align-items: center;$*/
 }
 
 button {
     margin-top: 25px;
-    position: absolute;
 }
 
 .backHomePage {
@@ -36,7 +35,7 @@ button {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 44px;
     color: #FF0000;
@@ -45,32 +44,25 @@ h1 {
     margin: auto;
 }
 
-/*.return {
-    width: 100px;
-    height: 100px;  
-    position: absolute;
-}*/
-
-/*button::before {
-    content:'';
-    border-bottom:23px solid black; /*couleur du fond derrière le bouton
-    border-right: 20px solid transparent;
-    position: absolute;
-    left:0;
-    bottom: 0;
-  }*/
+@media screen and (min-width: 600px) {
+    h1 { 
+        font-size: 60px;
+   }
+}   
+/*en dessous de 350 px le boutton mange le titre...*/
 
 img {
     position: relative;
     display: block;
     margin: auto;
+    margin-bottom: 3%;
+
 }
 
 article {
     width: auto;
     background-color: rgb(17, 13, 8);
     opacity: 0.75;
-    /*margin: 5%,0;*/
     padding: 2%;
     color: whitesmoke;
     margin-top: 1%;
@@ -90,50 +82,6 @@ p {
     margin-top: 5px;
 }
 
-header,footer {
-    padding: 50px;
-    }
-    
-    /*margin: 0;
-    height: auto;
-    width: 100%;
-    position: absolute;
-    width: auto;
-    height: 550px;*/
-    /*
-    J'ai utilisé le CodeSandBox de PierreG, mais ça n'influence pas j'ai l'impression.
-    Je n'ose pas toucher ailleurs de peur de tout refaire sauter :
-
-    html,
-body {
-  display: flex;
-  flex-direction: column;
-  background-color: #eeeeee;
-}
-
-header,
 footer {
-  background-color: rgb(34, 34, 34);
-  color: white;
-  padding: 20px;
-}
-
-main {
-  flex-grow: 1;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-    width: auto;
-    height: 500px;*/
-
-.return {
-    width: 0;
-    height: 0;
-    border-top: 18px solid transparent;
-    border-bottom: 18px solid transparent;
-    border-right: 30px solid yellow;
-    border-left: transparent;
-    cursor: pointer;
-    background-color: transparent;
-    box-shadow: 5px 0px red;
+    padding: 50px;
 }
